@@ -1,0 +1,14 @@
+{
+  "Aries": {
+    "number": 1,
+    "element": "Fire",
+    "quality": "Movable",
+    "ruler": "Mars"
+  },
+  "Taurus": {
+    "number": 2,
+    "element": "Earth",
+    "quality": "Fixed",
+    "ruler": "Venus"
+  }
+}

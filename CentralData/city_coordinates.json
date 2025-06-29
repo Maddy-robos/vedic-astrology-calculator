@@ -1,0 +1,1430 @@
+[
+  {
+    "name": "Addis Ababa, Ethiopia",
+    "latitude": 9.145,
+    "longitude": 40.4897,
+    "timezone": "Africa/Addis_Ababa"
+  },
+  {
+    "name": "Adelaide, Australia",
+    "latitude": -34.9285,
+    "longitude": 138.6007,
+    "timezone": "Australia/Adelaide"
+  },
+  {
+    "name": "Agra, India",
+    "latitude": 27.1767,
+    "longitude": 78.0081,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ahmedabad, India",
+    "latitude": 23.0225,
+    "longitude": 72.5714,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ajmer, India",
+    "latitude": 26.4499,
+    "longitude": 74.6399,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Akola, India",
+    "latitude": 20.7002,
+    "longitude": 77.0082,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Albuquerque, USA",
+    "latitude": 35.0844,
+    "longitude": -106.6504,
+    "timezone": "America/Denver"
+  },
+  {
+    "name": "Algiers, Algeria",
+    "latitude": 36.7373,
+    "longitude": 3.086,
+    "timezone": "Africa/Algiers"
+  },
+  {
+    "name": "Aligarh, India",
+    "latitude": 27.8974,
+    "longitude": 78.088,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Allahabad, India",
+    "latitude": 25.4358,
+    "longitude": 81.8463,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ambattur, India",
+    "latitude": 13.1143,
+    "longitude": 80.1548,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Amravati, India",
+    "latitude": 20.9374,
+    "longitude": 77.7796,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Amritsar, India",
+    "latitude": 31.634,
+    "longitude": 74.8723,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Amsterdam, Netherlands",
+    "latitude": 52.3676,
+    "longitude": 4.9041,
+    "timezone": "Europe/Amsterdam"
+  },
+  {
+    "name": "Arlington, USA",
+    "latitude": 32.7357,
+    "longitude": -97.1081,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Asansol, India",
+    "latitude": 23.6739,
+    "longitude": 86.9524,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Athens, Greece",
+    "latitude": 37.9838,
+    "longitude": 23.7275,
+    "timezone": "Europe/Athens"
+  },
+  {
+    "name": "Atlanta, USA",
+    "latitude": 33.749,
+    "longitude": -84.388,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Aurangabad, India",
+    "latitude": 19.8762,
+    "longitude": 75.3433,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Austin, USA",
+    "latitude": 30.2672,
+    "longitude": -97.7431,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Baltimore, USA",
+    "latitude": 39.2904,
+    "longitude": -76.6122,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Bangalore, India",
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bangkok, Thailand",
+    "latitude": 13.7563,
+    "longitude": 100.5018,
+    "timezone": "Asia/Bangkok"
+  },
+  {
+    "name": "Bareilly, India",
+    "latitude": 28.367,
+    "longitude": 79.4304,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Beijing, China",
+    "latitude": 39.9042,
+    "longitude": 116.4074,
+    "timezone": "Asia/Shanghai"
+  },
+  {
+    "name": "Belgaum, India",
+    "latitude": 15.8497,
+    "longitude": 74.4977,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bengaluru, India",
+    "latitude": 12.9716,
+    "longitude": 77.5946,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Berlin, Germany",
+    "latitude": 52.52,
+    "longitude": 13.405,
+    "timezone": "Europe/Berlin"
+  },
+  {
+    "name": "Bhavnagar, India",
+    "latitude": 21.7645,
+    "longitude": 72.1519,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bhilai Nagar, India",
+    "latitude": 21.1938,
+    "longitude": 81.3509,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bhiwandi, India",
+    "latitude": 19.3002,
+    "longitude": 73.0682,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bhopal, India",
+    "latitude": 23.2599,
+    "longitude": 77.4126,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bhubaneswar, India",
+    "latitude": 20.2961,
+    "longitude": 85.8245,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Bikaner, India",
+    "latitude": 28.0229,
+    "longitude": 73.3119,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Birmingham, UK",
+    "latitude": 52.4862,
+    "longitude": -1.8904,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Bogota, Colombia",
+    "latitude": 4.711,
+    "longitude": -74.0721,
+    "timezone": "America/Bogota"
+  },
+  {
+    "name": "Boston, USA",
+    "latitude": 42.3601,
+    "longitude": -71.0589,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Bradford, UK",
+    "latitude": 53.796,
+    "longitude": -1.7594,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Brisbane, Australia",
+    "latitude": -27.4698,
+    "longitude": 153.0251,
+    "timezone": "Australia/Brisbane"
+  },
+  {
+    "name": "Brussels, Belgium",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "timezone": "Europe/Brussels"
+  },
+  {
+    "name": "Bucharest, Romania",
+    "latitude": 44.4268,
+    "longitude": 26.1025,
+    "timezone": "Europe/Bucharest"
+  },
+  {
+    "name": "Budapest, Hungary",
+    "latitude": 47.4979,
+    "longitude": 19.0402,
+    "timezone": "Europe/Budapest"
+  },
+  {
+    "name": "Buenos Aires, Argentina",
+    "latitude": -34.6118,
+    "longitude": -58.396,
+    "timezone": "America/Argentina/Buenos_Aires"
+  },
+  {
+    "name": "Cairo, Egypt",
+    "latitude": 30.0444,
+    "longitude": 31.2357,
+    "timezone": "Africa/Cairo"
+  },
+  {
+    "name": "Calgary, Canada",
+    "latitude": 51.0447,
+    "longitude": -114.0719,
+    "timezone": "America/Edmonton"
+  },
+  {
+    "name": "Canberra, Australia",
+    "latitude": -35.2809,
+    "longitude": 149.13,
+    "timezone": "Australia/Sydney"
+  },
+  {
+    "name": "Cape Town, South Africa",
+    "latitude": -33.9249,
+    "longitude": 18.4241,
+    "timezone": "Africa/Johannesburg"
+  },
+  {
+    "name": "Casablanca, Morocco",
+    "latitude": 33.5731,
+    "longitude": -7.5898,
+    "timezone": "Africa/Casablanca"
+  },
+  {
+    "name": "Chandigarh, India",
+    "latitude": 30.7333,
+    "longitude": 76.7794,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Charlotte, USA",
+    "latitude": 35.2271,
+    "longitude": -80.8431,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Chennai, India",
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Chicago, USA",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Cleveland, USA",
+    "latitude": 41.4993,
+    "longitude": -81.6944,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Coimbatore, India",
+    "latitude": 11.0168,
+    "longitude": 76.9558,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Colombo, Sri Lanka",
+    "latitude": 6.9271,
+    "longitude": 79.8612,
+    "timezone": "Asia/Colombo"
+  },
+  {
+    "name": "Colorado Springs, USA",
+    "latitude": 38.8339,
+    "longitude": -104.8214,
+    "timezone": "America/Denver"
+  },
+  {
+    "name": "Columbus, USA",
+    "latitude": 39.9612,
+    "longitude": -82.9988,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Copenhagen, Denmark",
+    "latitude": 55.6761,
+    "longitude": 12.5683,
+    "timezone": "Europe/Copenhagen"
+  },
+  {
+    "name": "Cuttack, India",
+    "latitude": 20.4625,
+    "longitude": 85.8828,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Dallas, USA",
+    "latitude": 32.7767,
+    "longitude": -96.797,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Dehradun, India",
+    "latitude": 30.3165,
+    "longitude": 78.0322,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Delhi, India",
+    "latitude": 28.6139,
+    "longitude": 77.209,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Denver, USA",
+    "latitude": 39.7392,
+    "longitude": -104.9903,
+    "timezone": "America/Denver"
+  },
+  {
+    "name": "Detroit, USA",
+    "latitude": 42.3314,
+    "longitude": -83.0458,
+    "timezone": "America/Detroit"
+  },
+  {
+    "name": "Dhaka, Bangladesh",
+    "latitude": 23.8103,
+    "longitude": 90.4125,
+    "timezone": "Asia/Dhaka"
+  },
+  {
+    "name": "Dhanbad, India",
+    "latitude": 23.7957,
+    "longitude": 86.4304,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Dubai, UAE",
+    "latitude": 25.2048,
+    "longitude": 55.2708,
+    "timezone": "Asia/Dubai"
+  },
+  {
+    "name": "Dublin, Ireland",
+    "latitude": 53.3498,
+    "longitude": -6.2603,
+    "timezone": "Europe/Dublin"
+  },
+  {
+    "name": "Durgapur, India",
+    "latitude": 23.5204,
+    "longitude": 87.3119,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Edinburgh, UK",
+    "latitude": 55.9533,
+    "longitude": -3.1883,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Edmonton, Canada",
+    "latitude": 53.5461,
+    "longitude": -113.4938,
+    "timezone": "America/Edmonton"
+  },
+  {
+    "name": "El Paso, USA",
+    "latitude": 31.7619,
+    "longitude": -106.485,
+    "timezone": "America/Denver"
+  },
+  {
+    "name": "Erode, India",
+    "latitude": 11.341,
+    "longitude": 77.7172,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Faridabad, India",
+    "latitude": 28.4089,
+    "longitude": 77.3178,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Firozabad, India",
+    "latitude": 27.1592,
+    "longitude": 78.3957,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Fort Worth, USA",
+    "latitude": 32.7555,
+    "longitude": -97.3308,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Fresno, USA",
+    "latitude": 36.7378,
+    "longitude": -119.7871,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Gaya, India",
+    "latitude": 24.7914,
+    "longitude": 85.0002,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ghaziabad, India",
+    "latitude": 28.6692,
+    "longitude": 77.4538,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Glasgow, UK",
+    "latitude": 55.8642,
+    "longitude": -4.2518,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Gold Coast, Australia",
+    "latitude": -28.0167,
+    "longitude": 153.4,
+    "timezone": "Australia/Brisbane"
+  },
+  {
+    "name": "Gorakhpur, India",
+    "latitude": 26.7606,
+    "longitude": 83.3732,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Gulbarga, India",
+    "latitude": 17.3297,
+    "longitude": 76.8343,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Guntur, India",
+    "latitude": 16.3067,
+    "longitude": 80.4365,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Gurgaon, India",
+    "latitude": 28.4595,
+    "longitude": 77.0266,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Gurugram, India",
+    "latitude": 28.4595,
+    "longitude": 77.0266,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Guwahati, India",
+    "latitude": 26.1445,
+    "longitude": 91.7362,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Gwalior, India",
+    "latitude": 26.2183,
+    "longitude": 78.1828,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Hamilton, Canada",
+    "latitude": 43.2557,
+    "longitude": -79.8711,
+    "timezone": "America/Toronto"
+  },
+  {
+    "name": "Haora, India",
+    "latitude": 22.5958,
+    "longitude": 88.2636,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Helsinki, Finland",
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "timezone": "Europe/Helsinki"
+  },
+  {
+    "name": "Hong Kong, Hong Kong",
+    "latitude": 22.3193,
+    "longitude": 114.1694,
+    "timezone": "Asia/Hong_Kong"
+  },
+  {
+    "name": "Houston, USA",
+    "latitude": 29.7604,
+    "longitude": -95.3698,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Hubli, India",
+    "latitude": 15.3647,
+    "longitude": 75.124,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Hyderabad, India",
+    "latitude": 17.385,
+    "longitude": 78.4867,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Indore, India",
+    "latitude": 22.7196,
+    "longitude": 75.8577,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Islamabad, Pakistan",
+    "latitude": 33.6844,
+    "longitude": 73.0479,
+    "timezone": "Asia/Karachi"
+  },
+  {
+    "name": "Istanbul, Turkey",
+    "latitude": 41.0082,
+    "longitude": 28.9784,
+    "timezone": "Europe/Istanbul"
+  },
+  {
+    "name": "Jabalpur, India",
+    "latitude": 23.1815,
+    "longitude": 79.9864,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jaipur, India",
+    "latitude": 26.9124,
+    "longitude": 75.7873,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jakarta, Indonesia",
+    "latitude": -6.2088,
+    "longitude": 106.8456,
+    "timezone": "Asia/Jakarta"
+  },
+  {
+    "name": "Jalandhar, India",
+    "latitude": 31.326,
+    "longitude": 75.5762,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jalgaon, India",
+    "latitude": 21.0077,
+    "longitude": 75.5626,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jammu, India",
+    "latitude": 32.7266,
+    "longitude": 74.857,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jamnagar, India",
+    "latitude": 22.4707,
+    "longitude": 70.0577,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jamshedpur, India",
+    "latitude": 22.8046,
+    "longitude": 86.2029,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jhansi, India",
+    "latitude": 25.4484,
+    "longitude": 78.5685,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Jodhpur, India",
+    "latitude": 26.2389,
+    "longitude": 73.0243,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Johannesburg, South Africa",
+    "latitude": -26.2041,
+    "longitude": 28.0473,
+    "timezone": "Africa/Johannesburg"
+  },
+  {
+    "name": "Kalyan, India",
+    "latitude": 19.2403,
+    "longitude": 73.1305,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kanpur, India",
+    "latitude": 26.4499,
+    "longitude": 80.3319,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kansas City, USA",
+    "latitude": 39.0997,
+    "longitude": -94.5786,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Karachi, Pakistan",
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "timezone": "Asia/Karachi"
+  },
+  {
+    "name": "Kathmandu, Nepal",
+    "latitude": 27.7172,
+    "longitude": 85.324,
+    "timezone": "Asia/Kathmandu"
+  },
+  {
+    "name": "Kitchener, Canada",
+    "latitude": 43.4516,
+    "longitude": -80.4925,
+    "timezone": "America/Toronto"
+  },
+  {
+    "name": "Kochi, India",
+    "latitude": 9.9312,
+    "longitude": 76.2673,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kolhapur, India",
+    "latitude": 16.705,
+    "longitude": 74.2433,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kolkata, India",
+    "latitude": 22.5726,
+    "longitude": 88.3639,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kota, India",
+    "latitude": 25.2138,
+    "longitude": 75.8648,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Kuala Lumpur, Malaysia",
+    "latitude": 3.139,
+    "longitude": 101.6869,
+    "timezone": "Asia/Kuala_Lumpur"
+  },
+  {
+    "name": "Lagos, Nigeria",
+    "latitude": 6.5244,
+    "longitude": 3.3792,
+    "timezone": "Africa/Lagos"
+  },
+  {
+    "name": "Lahore, Pakistan",
+    "latitude": 31.5804,
+    "longitude": 74.3587,
+    "timezone": "Asia/Karachi"
+  },
+  {
+    "name": "Las Vegas, USA",
+    "latitude": 36.1699,
+    "longitude": -115.1398,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Leeds, UK",
+    "latitude": 53.8008,
+    "longitude": -1.5491,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Lima, Peru",
+    "latitude": -12.0464,
+    "longitude": -77.0428,
+    "timezone": "America/Lima"
+  },
+  {
+    "name": "Lisbon, Portugal",
+    "latitude": 38.7223,
+    "longitude": -9.1393,
+    "timezone": "Europe/Lisbon"
+  },
+  {
+    "name": "Liverpool, UK",
+    "latitude": 53.4084,
+    "longitude": -2.9916,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "London, UK",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Long Beach, USA",
+    "latitude": 33.7701,
+    "longitude": -118.1937,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Loni, India",
+    "latitude": 28.7333,
+    "longitude": 77.2833,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Los Angeles, USA",
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Louisville, USA",
+    "latitude": 38.2527,
+    "longitude": -85.7585,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Lucknow, India",
+    "latitude": 26.8467,
+    "longitude": 80.9462,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ludhiana, India",
+    "latitude": 30.901,
+    "longitude": 75.8573,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Madrid, Spain",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "timezone": "Europe/Madrid"
+  },
+  {
+    "name": "Madurai, India",
+    "latitude": 9.9252,
+    "longitude": 78.1198,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Maheshtala, India",
+    "latitude": 22.5082,
+    "longitude": 88.2533,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Malegaon, India",
+    "latitude": 20.5579,
+    "longitude": 74.5287,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Manchester, UK",
+    "latitude": 53.4808,
+    "longitude": -2.2426,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Mangalore, India",
+    "latitude": 12.9141,
+    "longitude": 74.856,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Manila, Philippines",
+    "latitude": 14.5995,
+    "longitude": 120.9842,
+    "timezone": "Asia/Manila"
+  },
+  {
+    "name": "Meerut, India",
+    "latitude": 28.9845,
+    "longitude": 77.7064,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Melbourne, Australia",
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "timezone": "Australia/Melbourne"
+  },
+  {
+    "name": "Memphis, USA",
+    "latitude": 35.1495,
+    "longitude": -90.049,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Mesa, USA",
+    "latitude": 33.4152,
+    "longitude": -111.8315,
+    "timezone": "America/Phoenix"
+  },
+  {
+    "name": "Mexico City, Mexico",
+    "latitude": 19.4326,
+    "longitude": -99.1332,
+    "timezone": "America/Mexico_City"
+  },
+  {
+    "name": "Miami, USA",
+    "latitude": 25.7617,
+    "longitude": -80.1918,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Milwaukee, USA",
+    "latitude": 43.0389,
+    "longitude": -87.9065,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Minneapolis, USA",
+    "latitude": 44.9778,
+    "longitude": -93.265,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Mira Bhayandar, India",
+    "latitude": 19.2952,
+    "longitude": 72.8544,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Montreal, Canada",
+    "latitude": 45.5017,
+    "longitude": -73.5673,
+    "timezone": "America/Montreal"
+  },
+  {
+    "name": "Moradabad, India",
+    "latitude": 28.8386,
+    "longitude": 78.7733,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Moscow, Russia",
+    "latitude": 55.7558,
+    "longitude": 37.6176,
+    "timezone": "Europe/Moscow"
+  },
+  {
+    "name": "Mumbai, India",
+    "latitude": 19.076,
+    "longitude": 72.8777,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Mysore, India",
+    "latitude": 12.2958,
+    "longitude": 76.6394,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Mysuru, India",
+    "latitude": 12.2958,
+    "longitude": 76.6394,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Nagpur, India",
+    "latitude": 21.1458,
+    "longitude": 79.0882,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Nairobi, Kenya",
+    "latitude": -1.2921,
+    "longitude": 36.8219,
+    "timezone": "Africa/Nairobi"
+  },
+  {
+    "name": "Nanded, India",
+    "latitude": 19.1383,
+    "longitude": 77.321,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Nashik, India",
+    "latitude": 19.9975,
+    "longitude": 73.7898,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Nashville, USA",
+    "latitude": 36.1627,
+    "longitude": -86.7816,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Navi Mumbai, India",
+    "latitude": 19.033,
+    "longitude": 73.0297,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Nellore, India",
+    "latitude": 14.4426,
+    "longitude": 79.9865,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "New Delhi, India",
+    "latitude": 28.6139,
+    "longitude": 77.209,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "New York, USA",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Newcastle, Australia",
+    "latitude": -32.9283,
+    "longitude": 151.7817,
+    "timezone": "Australia/Sydney"
+  },
+  {
+    "name": "Noida, India",
+    "latitude": 28.5355,
+    "longitude": 77.391,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Oakland, USA",
+    "latitude": 37.8044,
+    "longitude": -122.2711,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Oklahoma City, USA",
+    "latitude": 35.4676,
+    "longitude": -97.5164,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Omaha, USA",
+    "latitude": 41.2565,
+    "longitude": -95.9345,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Oslo, Norway",
+    "latitude": 59.9139,
+    "longitude": 10.7522,
+    "timezone": "Europe/Oslo"
+  },
+  {
+    "name": "Ottawa, Canada",
+    "latitude": 45.4215,
+    "longitude": -75.6972,
+    "timezone": "America/Toronto"
+  },
+  {
+    "name": "Paris, France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "timezone": "Europe/Paris"
+  },
+  {
+    "name": "Patna, India",
+    "latitude": 25.5941,
+    "longitude": 85.1376,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Perth, Australia",
+    "latitude": -31.9505,
+    "longitude": 115.8605,
+    "timezone": "Australia/Perth"
+  },
+  {
+    "name": "Philadelphia, USA",
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Phoenix, USA",
+    "latitude": 33.4484,
+    "longitude": -112.074,
+    "timezone": "America/Phoenix"
+  },
+  {
+    "name": "Portland, USA",
+    "latitude": 45.5152,
+    "longitude": -122.6784,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Prague, Czech Republic",
+    "latitude": 50.0755,
+    "longitude": 14.4378,
+    "timezone": "Europe/Prague"
+  },
+  {
+    "name": "Prayagraj, India",
+    "latitude": 25.4358,
+    "longitude": 81.8463,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Pune, India",
+    "latitude": 18.5204,
+    "longitude": 73.8567,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Quebec City, Canada",
+    "latitude": 46.8139,
+    "longitude": -71.208,
+    "timezone": "America/Montreal"
+  },
+  {
+    "name": "Raipur, India",
+    "latitude": 21.2514,
+    "longitude": 81.6296,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Rajkot, India",
+    "latitude": 22.3039,
+    "longitude": 70.8022,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Raleigh, USA",
+    "latitude": 35.7796,
+    "longitude": -78.6382,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Ranchi, India",
+    "latitude": 23.3441,
+    "longitude": 85.3096,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Rio De Janeiro, Brazil",
+    "latitude": -22.9068,
+    "longitude": -43.1729,
+    "timezone": "America/Sao_Paulo"
+  },
+  {
+    "name": "Riyadh, Saudi Arabia",
+    "latitude": 24.7136,
+    "longitude": 46.6753,
+    "timezone": "Asia/Riyadh"
+  },
+  {
+    "name": "Rome, Italy",
+    "latitude": 41.9028,
+    "longitude": 12.4964,
+    "timezone": "Europe/Rome"
+  },
+  {
+    "name": "Rourkela, India",
+    "latitude": 22.2604,
+    "longitude": 84.8536,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Sacramento, USA",
+    "latitude": 38.5816,
+    "longitude": -121.4944,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Saharanpur, India",
+    "latitude": 29.968,
+    "longitude": 77.5552,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Salem, India",
+    "latitude": 11.6643,
+    "longitude": 78.146,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "San Antonio, USA",
+    "latitude": 29.4241,
+    "longitude": -98.4936,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "San Diego, USA",
+    "latitude": 32.7157,
+    "longitude": -117.1611,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "San Jose, USA",
+    "latitude": 37.3382,
+    "longitude": -121.8863,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Sangli Miraj Kupwad, India",
+    "latitude": 16.8667,
+    "longitude": 74.5667,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Santiago, Chile",
+    "latitude": -33.4489,
+    "longitude": -70.6693,
+    "timezone": "America/Santiago"
+  },
+  {
+    "name": "Sao Paulo, Brazil",
+    "latitude": -23.5558,
+    "longitude": -46.6396,
+    "timezone": "America/Sao_Paulo"
+  },
+  {
+    "name": "Seattle, USA",
+    "latitude": 47.6062,
+    "longitude": -122.3321,
+    "timezone": "America/Los_Angeles"
+  },
+  {
+    "name": "Seoul, South Korea",
+    "latitude": 37.5665,
+    "longitude": 126.978,
+    "timezone": "Asia/Seoul"
+  },
+  {
+    "name": "Shanghai, China",
+    "latitude": 31.2304,
+    "longitude": 121.4737,
+    "timezone": "Asia/Shanghai"
+  },
+  {
+    "name": "Sheffield, UK",
+    "latitude": 53.3811,
+    "longitude": -1.4701,
+    "timezone": "Europe/London"
+  },
+  {
+    "name": "Siliguri, India",
+    "latitude": 26.7271,
+    "longitude": 88.3953,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Singapore, Singapore",
+    "latitude": 1.3521,
+    "longitude": 103.8198,
+    "timezone": "Asia/Singapore"
+  },
+  {
+    "name": "Solapur, India",
+    "latitude": 17.6599,
+    "longitude": 75.9064,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Srinagar, India",
+    "latitude": 34.0837,
+    "longitude": 74.7973,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Stockholm, Sweden",
+    "latitude": 59.3293,
+    "longitude": 18.0686,
+    "timezone": "Europe/Stockholm"
+  },
+  {
+    "name": "Sunshine Coast, Australia",
+    "latitude": -26.65,
+    "longitude": 153.0667,
+    "timezone": "Australia/Brisbane"
+  },
+  {
+    "name": "Sydney, Australia",
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "timezone": "Australia/Sydney"
+  },
+  {
+    "name": "Tehran, Iran",
+    "latitude": 35.6892,
+    "longitude": 51.389,
+    "timezone": "Asia/Tehran"
+  },
+  {
+    "name": "Tel Aviv, Israel",
+    "latitude": 32.0853,
+    "longitude": 34.7818,
+    "timezone": "Asia/Jerusalem"
+  },
+  {
+    "name": "Thiruvananthapuram, India",
+    "latitude": 8.5241,
+    "longitude": 76.9366,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Tiruchirappalli, India",
+    "latitude": 10.7905,
+    "longitude": 78.7047,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Tirunelveli, India",
+    "latitude": 8.7139,
+    "longitude": 77.7567,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Tirupati, India",
+    "latitude": 13.6288,
+    "longitude": 79.4192,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Tokyo, Japan",
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "timezone": "Asia/Tokyo"
+  },
+  {
+    "name": "Toronto, Canada",
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "timezone": "America/Toronto"
+  },
+  {
+    "name": "Tucson, USA",
+    "latitude": 32.2226,
+    "longitude": -110.9747,
+    "timezone": "America/Phoenix"
+  },
+  {
+    "name": "Tulsa, USA",
+    "latitude": 36.154,
+    "longitude": -95.9928,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Tunis, Tunisia",
+    "latitude": 36.8065,
+    "longitude": 10.1815,
+    "timezone": "Africa/Tunis"
+  },
+  {
+    "name": "Udaipur, India",
+    "latitude": 24.5854,
+    "longitude": 73.7125,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ujjain, India",
+    "latitude": 23.1765,
+    "longitude": 75.7885,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Ulhasnagar, India",
+    "latitude": 19.2215,
+    "longitude": 73.1645,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Vadodara, India",
+    "latitude": 22.3072,
+    "longitude": 73.1812,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Vancouver, Canada",
+    "latitude": 49.2827,
+    "longitude": -123.1207,
+    "timezone": "America/Vancouver"
+  },
+  {
+    "name": "Varanasi, India",
+    "latitude": 25.3176,
+    "longitude": 82.9739,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Vasai, India",
+    "latitude": 19.4912,
+    "longitude": 72.8054,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Vienna, Austria",
+    "latitude": 48.2082,
+    "longitude": 16.3738,
+    "timezone": "Europe/Vienna"
+  },
+  {
+    "name": "Vijayawada, India",
+    "latitude": 16.5062,
+    "longitude": 80.648,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Visakhapatnam, India",
+    "latitude": 17.6868,
+    "longitude": 83.2185,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Warangal, India",
+    "latitude": 17.9689,
+    "longitude": 79.5941,
+    "timezone": "Asia/Kolkata"
+  },
+  {
+    "name": "Warsaw, Poland",
+    "latitude": 52.2297,
+    "longitude": 21.0122,
+    "timezone": "Europe/Warsaw"
+  },
+  {
+    "name": "Washington, USA",
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "timezone": "America/New_York"
+  },
+  {
+    "name": "Wichita, USA",
+    "latitude": 37.6872,
+    "longitude": -97.3301,
+    "timezone": "America/Chicago"
+  },
+  {
+    "name": "Winnipeg, Canada",
+    "latitude": 49.8951,
+    "longitude": -97.1384,
+    "timezone": "America/Winnipeg"
+  },
+  {
+    "name": "Wollongong, Australia",
+    "latitude": -34.4278,
+    "longitude": 150.8931,
+    "timezone": "Australia/Sydney"
+  },
+  {
+    "name": "Zurich, Switzerland",
+    "latitude": 47.3769,
+    "longitude": 8.5417,
+    "timezone": "Europe/Zurich"
+  }
+]

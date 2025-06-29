@@ -1,0 +1,34 @@
+{
+  "Sun": {
+    "sanskrit": "Surya",
+    "nature": "Malefic",
+    "element": "Fire",
+    "owns": [
+      "Leo"
+    ],
+    "exaltation": {
+      "sign": "Aries",
+      "degree": 10
+    },
+    "debilitation": {
+      "sign": "Libra",
+      "degree": 10
+    }
+  },
+  "Moon": {
+    "sanskrit": "Chandra",
+    "nature": "Benefic when waxing",
+    "element": "Water",
+    "owns": [
+      "Cancer"
+    ],
+    "exaltation": {
+      "sign": "Taurus",
+      "degree": 3
+    },
+    "debilitation": {
+      "sign": "Scorpio",
+      "degree": 3
+    }
+  }
+}

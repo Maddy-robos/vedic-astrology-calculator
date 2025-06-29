@@ -1,0 +1,12 @@
+{
+  "default_ayanamsa": "lahiri",
+  "default_location": {
+    "latitude": 13.0827,
+    "longitude": 80.2707,
+    "timezone": "Asia/Kolkata"
+  },
+  "calculation_precision": {
+    "degrees": 2,
+    "minutes": 0
+  }
+}

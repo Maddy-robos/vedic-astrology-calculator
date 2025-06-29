@@ -1,0 +1,62 @@
+# Core astronomical calculations
+pyswisseph==2.10.3.1  # Swiss Ephemeris for accurate planetary positions
+astropy==5.3.4        # Alternative astronomical calculations
+ephem==4.1.4          # PyEphem for basic astronomical calculations
+
+# Date and time handling
+pytz==2023.3          # Timezone support
+python-dateutil==2.8.2 # Date parsing and manipulation
+
+# Data processing
+numpy==1.24.3         # Numerical computations
+pandas==2.0.3         # Data manipulation and analysis
+scipy==1.11.1         # Scientific computing
+
+# File handling
+openpyxl==3.1.2       # Excel file support
+xlsxwriter==3.1.2     # Writing Excel files
+python-docx==0.8.11   # Word document support
+
+# Visualization (for research)
+matplotlib==3.7.2     # Plotting and charts
+seaborn==0.12.2       # Statistical visualizations
+plotly==5.15.0        # Interactive visualizations
+
+# Database (for storing research data)
+sqlalchemy==2.0.19    # SQL toolkit
+sqlite3               # Built-in, no install needed
+
+# API and web (if needed for data sources)
+requests==2.31.0      # HTTP requests
+beautifulsoup4==4.12.2 # Web scraping
+
+# Testing
+pytest==7.4.0         # Testing framework
+pytest-cov==4.1.0     # Coverage reports
+
+# Code quality
+black==23.7.0         # Code formatting
+flake8==6.0.0         # Linting
+mypy==1.4.1           # Type checking
+
+# Documentation
+sphinx==7.1.0         # Documentation generator
+sphinx-rtd-theme==1.3.0 # Read the Docs theme
+
+# Optional: Machine learning for pattern recognition
+scikit-learn==1.3.0   # Machine learning library
+tensorflow==2.13.0    # Deep learning (optional)
+
+# Configuration
+pyyaml==6.0.1         # YAML configuration files
+python-dotenv==1.0.0  # Environment variables
+
+# Logging
+loguru==0.7.0         # Better logging
+
+# Progress bars for long calculations
+tqdm==4.65.0          # Progress bars
+
+# Geographic calculations
+geopy==2.3.0          # Geographic calculations
+timezonefinder==6.2.0 # Find timezone from coordinates

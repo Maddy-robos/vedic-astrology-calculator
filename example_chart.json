@@ -1,0 +1,4275 @@
+{
+  "birth_info": {
+    "birth_datetime": "1990-05-15T14:30:00",
+    "birth_datetime_utc": "1990-05-15T09:00:00+00:00",
+    "julian_day": 2448026.875,
+    "latitude": 28.6139,
+    "longitude": 77.209,
+    "timezone": "Asia/Kolkata",
+    "ayanamsa": "Lahiri",
+    "house_system": "Equal",
+    "ayanamsa_value": 23.715444895999696
+  },
+  "chart_data": {
+    "birth_info": {
+      "birth_datetime": "1990-05-15T14:30:00",
+      "birth_datetime_utc": "1990-05-15T09:00:00+00:00",
+      "julian_day": 2448026.875,
+      "latitude": 28.6139,
+      "longitude": 77.209,
+      "timezone": "Asia/Kolkata",
+      "ayanamsa": "Lahiri",
+      "house_system": "Equal",
+      "ayanamsa_value": 23.715444895999696
+    },
+    "grahas": {
+      "Sun": {
+        "longitude": 351.78455510400033,
+        "latitude": 0.0,
+        "speed": 1.0,
+        "rasi": "Pisces",
+        "degrees_in_rasi": 21.784555104000333,
+        "nakshatra": "Revati",
+        "pada": 2,
+        "is_retrograde": false
+      },
+      "Moon": {
+        "longitude": 71.48455510400031,
+        "latitude": 2.1,
+        "speed": 13.2,
+        "rasi": "Gemini",
+        "degrees_in_rasi": 11.484555104000307,
+        "nakshatra": "Ardra",
+        "pada": 2,
+        "is_retrograde": false
+      },
+      "Mars": {
+        "longitude": 187.08455510400032,
+        "latitude": 1.5,
+        "speed": 0.5,
+        "rasi": "Libra",
+        "degrees_in_rasi": 7.084555104000316,
+        "nakshatra": "Swati",
+        "pada": 1,
+        "is_retrograde": false
+      },
+      "Mercury": {
+        "longitude": 1.5845551040003052,
+        "latitude": -1.2,
+        "speed": 1.2,
+        "rasi": "Aries",
+        "degrees_in_rasi": 1.5845551040003052,
+        "nakshatra": "Ashwini",
+        "pada": 1,
+        "is_retrograde": false
+      },
+      "Jupiter": {
+        "longitude": 156.9845551040003,
+        "latitude": 0.8,
+        "speed": 0.08,
+        "rasi": "Virgo",
+        "degrees_in_rasi": 6.984555104000293,
+        "nakshatra": "Uttara Phalguni",
+        "pada": 4,
+        "is_retrograde": false
+      },
+      "Venus": {
+        "longitude": 12.184555104000303,
+        "latitude": 2.3,
+        "speed": 1.1,
+        "rasi": "Aries",
+        "degrees_in_rasi": 12.184555104000303,
+        "nakshatra": "Ashwini",
+        "pada": 4,
+        "is_retrograde": false
+      },
+      "Saturn": {
+        "longitude": 291.6845551040003,
+        "latitude": -1.8,
+        "speed": 0.03,
+        "rasi": "Capricorn",
+        "degrees_in_rasi": 21.68455510400031,
+        "nakshatra": "Shravana",
+        "pada": 4,
+        "is_retrograde": false
+      },
+      "Rahu": {
+        "longitude": 101.8845551040003,
+        "latitude": 0.0,
+        "speed": -0.05,
+        "rasi": "Cancer",
+        "degrees_in_rasi": 11.884555104000299,
+        "nakshatra": "Pushya",
+        "pada": 3,
+        "is_retrograde": true
+      },
+      "Ketu": {
+        "longitude": 281.88455510400036,
+        "latitude": 0.0,
+        "speed": -0.05,
+        "rasi": "Capricorn",
+        "degrees_in_rasi": 11.884555104000356,
+        "nakshatra": "Shravana",
+        "pada": 1,
+        "is_retrograde": true
+      }
+    },
+    "ascendant": {
+      "longitude": 75.63048654421289,
+      "rasi": "Gemini",
+      "degrees_in_rasi": 15.630486544212886,
+      "nakshatra": "Ardra",
+      "pada": 3,
+      "local_sidereal_time": 85.03898144021258
+    },
+    "bhavas": {
+      "1": {
+        "number": 1,
+        "name": "Lagna/Tanu Bhava",
+        "sanskrit_name": "Tanu Bhava",
+        "cusp_degree": 75.63048654421289,
+        "rasi": "Gemini",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Fire",
+        "nature": "Kendra",
+        "karaka": "Sun",
+        "is_kendra": true,
+        "is_trikona": true,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Self",
+          "Personality",
+          "Physical body",
+          "Health",
+          "Appearance",
+          "Character",
+          "Temperament",
+          "Identity",
+          "Birth",
+          "Beginning"
+        ],
+        "secondary_significations": [
+          "Fame",
+          "Honor",
+          "Dignity",
+          "Head region",
+          "Overall vitality",
+          "Complexion",
+          "Form",
+          "Disposition",
+          "Nature"
+        ],
+        "body_parts": [
+          "Head",
+          "Brain",
+          "Face",
+          "Skull"
+        ],
+        "opposite_bhava": 7,
+        "trikona_bhavas": [
+          1,
+          5,
+          9
+        ],
+        "kendra_bhavas": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "2": {
+        "number": 2,
+        "name": "Dhana Bhava",
+        "sanskrit_name": "Dhana Bhava",
+        "cusp_degree": 105.63048654421289,
+        "rasi": "Cancer",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Earth",
+        "nature": "Maraka",
+        "karaka": "Jupiter",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": true,
+        "strength_category": "Moderate",
+        "primary_significations": [
+          "Wealth",
+          "Money",
+          "Possessions",
+          "Family",
+          "Speech",
+          "Food",
+          "Face",
+          "Right eye",
+          "Accumulated wealth"
+        ],
+        "secondary_significations": [
+          "Tongue",
+          "Teeth",
+          "Nails",
+          "Precious metals",
+          "Gems",
+          "Learning",
+          "Education",
+          "Family traditions",
+          "Values"
+        ],
+        "body_parts": [
+          "Face",
+          "Right eye",
+          "Throat",
+          "Neck",
+          "Tongue"
+        ],
+        "opposite_bhava": 8,
+        "trikona_bhavas": [
+          2,
+          6,
+          10
+        ],
+        "kendra_bhavas": [
+          2,
+          5,
+          8,
+          11
+        ]
+      },
+      "3": {
+        "number": 3,
+        "name": "Sahaja/Parakrama Bhava",
+        "sanskrit_name": "Sahaja Bhava",
+        "cusp_degree": 135.63048654421289,
+        "rasi": "Leo",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Air",
+        "nature": "Upachaya",
+        "karaka": "Mars",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": true,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Weak initially, grows with time",
+        "primary_significations": [
+          "Siblings",
+          "Courage",
+          "Efforts",
+          "Short journeys",
+          "Communication",
+          "Skills",
+          "Talents",
+          "Arms",
+          "Right ear",
+          "Neighbors"
+        ],
+        "secondary_significations": [
+          "Writing",
+          "Arts",
+          "Dance",
+          "Music",
+          "Heroism",
+          "Enterprise",
+          "Signing documents",
+          "Agreements",
+          "Prowess"
+        ],
+        "body_parts": [
+          "Arms",
+          "Hands",
+          "Shoulders",
+          "Right ear",
+          "Throat"
+        ],
+        "opposite_bhava": 9,
+        "trikona_bhavas": [
+          3,
+          7,
+          11
+        ],
+        "kendra_bhavas": [
+          3,
+          6,
+          9,
+          12
+        ]
+      },
+      "4": {
+        "number": 4,
+        "name": "Sukha/Matru Bhava",
+        "sanskrit_name": "Sukha Bhava",
+        "cusp_degree": 165.63048654421289,
+        "rasi": "Virgo",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Water",
+        "nature": "Kendra",
+        "karaka": "Moon",
+        "is_kendra": true,
+        "is_trikona": false,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Mother",
+          "Home",
+          "Property",
+          "Land",
+          "Vehicles",
+          "Happiness",
+          "Comforts",
+          "Education",
+          "Heart",
+          "Chest"
+        ],
+        "secondary_significations": [
+          "Emotions",
+          "Mind",
+          "Gardens",
+          "Wells",
+          "Buildings",
+          "Homeland",
+          "Academic degrees",
+          "Private life"
+        ],
+        "body_parts": [
+          "Heart",
+          "Chest",
+          "Lungs",
+          "Ribs"
+        ],
+        "opposite_bhava": 10,
+        "trikona_bhavas": [
+          4,
+          8,
+          12
+        ],
+        "kendra_bhavas": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "5": {
+        "number": 5,
+        "name": "Putra/Vidya Bhava",
+        "sanskrit_name": "Putra Bhava",
+        "cusp_degree": 195.63048654421289,
+        "rasi": "Libra",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Fire",
+        "nature": "Trikona",
+        "karaka": "Jupiter",
+        "is_kendra": false,
+        "is_trikona": true,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Children",
+          "Creativity",
+          "Intelligence",
+          "Education",
+          "Romance",
+          "Speculation",
+          "Investments",
+          "Purva punya",
+          "Stomach"
+        ],
+        "secondary_significations": [
+          "Mantras",
+          "Spiritual practices",
+          "Authorship",
+          "Sports",
+          "Entertainment",
+          "Love affairs",
+          "Pregnancy"
+        ],
+        "body_parts": [
+          "Stomach",
+          "Upper abdomen",
+          "Liver",
+          "Gall bladder"
+        ],
+        "opposite_bhava": 11,
+        "trikona_bhavas": [
+          1,
+          5,
+          9
+        ],
+        "kendra_bhavas": [
+          2,
+          5,
+          8,
+          11
+        ]
+      },
+      "6": {
+        "number": 6,
+        "name": "Ari/Roga Bhava",
+        "sanskrit_name": "Ari Bhava",
+        "cusp_degree": 225.63048654421289,
+        "rasi": "Scorpio",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Earth",
+        "nature": "Upachaya",
+        "karaka": "Mars/Saturn",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": true,
+        "is_dusthana": true,
+        "is_maraka": false,
+        "strength_category": "Weak initially, grows with time",
+        "primary_significations": [
+          "Enemies",
+          "Diseases",
+          "Debts",
+          "Service",
+          "Employees",
+          "Obstacles",
+          "Litigation",
+          "Competition",
+          "Lower abdomen"
+        ],
+        "secondary_significations": [
+          "Immune system",
+          "Daily work",
+          "Routine",
+          "Pets",
+          "Uncle/Aunt (maternal)",
+          "Step-mother",
+          "Theft"
+        ],
+        "body_parts": [
+          "Lower abdomen",
+          "Kidneys",
+          "Small intestine"
+        ],
+        "opposite_bhava": 12,
+        "trikona_bhavas": [
+          2,
+          6,
+          10
+        ],
+        "kendra_bhavas": [
+          3,
+          6,
+          9,
+          12
+        ]
+      },
+      "7": {
+        "number": 7,
+        "name": "Kalatra/Jaya Bhava",
+        "sanskrit_name": "Kalatra Bhava",
+        "cusp_degree": 255.63048654421289,
+        "rasi": "Sagittarius",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Air",
+        "nature": "Kendra/Maraka",
+        "karaka": "Venus",
+        "is_kendra": true,
+        "is_trikona": false,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": true,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Spouse",
+          "Marriage",
+          "Business partnerships",
+          "Public life",
+          "Travel",
+          "Trade",
+          "Death",
+          "Sexual organs"
+        ],
+        "secondary_significations": [
+          "Passion",
+          "Desires",
+          "Public image",
+          "Cooperation",
+          "Diplomacy",
+          "Balance",
+          "Open enemies"
+        ],
+        "body_parts": [
+          "Sexual organs",
+          "Kidneys",
+          "Lower back"
+        ],
+        "opposite_bhava": 1,
+        "trikona_bhavas": [
+          3,
+          7,
+          11
+        ],
+        "kendra_bhavas": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "8": {
+        "number": 8,
+        "name": "Ayu/Mrityu Bhava",
+        "sanskrit_name": "Ayu Bhava",
+        "cusp_degree": 285.6304865442129,
+        "rasi": "Capricorn",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Water",
+        "nature": "Dusthana",
+        "karaka": "Saturn",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": false,
+        "is_dusthana": true,
+        "is_maraka": false,
+        "strength_category": "Weak",
+        "primary_significations": [
+          "Longevity",
+          "Death",
+          "Occult",
+          "Mysteries",
+          "Transformation",
+          "Inheritance",
+          "Insurance",
+          "Hidden wealth",
+          "Excretory organs"
+        ],
+        "secondary_significations": [
+          "Accidents",
+          "Surgery",
+          "Research",
+          "Investigation",
+          "Spouse's wealth",
+          "Chronic diseases",
+          "Disgrace"
+        ],
+        "body_parts": [
+          "Excretory organs",
+          "Reproductive system",
+          "Colon"
+        ],
+        "opposite_bhava": 2,
+        "trikona_bhavas": [
+          4,
+          8,
+          12
+        ],
+        "kendra_bhavas": [
+          2,
+          5,
+          8,
+          11
+        ]
+      },
+      "9": {
+        "number": 9,
+        "name": "Bhagya/Dharma Bhava",
+        "sanskrit_name": "Bhagya Bhava",
+        "cusp_degree": 315.6304865442129,
+        "rasi": "Aquarius",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Fire",
+        "nature": "Trikona",
+        "karaka": "Jupiter/Sun",
+        "is_kendra": false,
+        "is_trikona": true,
+        "is_upachaya": false,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Fortune",
+          "Religion",
+          "Philosophy",
+          "Higher learning",
+          "Father",
+          "Teacher",
+          "Long journeys",
+          "Pilgrimage",
+          "Hips"
+        ],
+        "secondary_significations": [
+          "Spirituality",
+          "Wisdom",
+          "Publishing",
+          "Foreign connections",
+          "Grandchildren",
+          "Dreams",
+          "Intuition"
+        ],
+        "body_parts": [
+          "Hips",
+          "Thighs",
+          "Buttocks"
+        ],
+        "opposite_bhava": 3,
+        "trikona_bhavas": [
+          1,
+          5,
+          9
+        ],
+        "kendra_bhavas": [
+          3,
+          6,
+          9,
+          12
+        ]
+      },
+      "10": {
+        "number": 10,
+        "name": "Karma/Rajya Bhava",
+        "sanskrit_name": "Karma Bhava",
+        "cusp_degree": 345.6304865442129,
+        "rasi": "Pisces",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Earth",
+        "nature": "Kendra",
+        "karaka": "Sun/Mercury/Jupiter/Saturn",
+        "is_kendra": true,
+        "is_trikona": false,
+        "is_upachaya": true,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Very Strong",
+        "primary_significations": [
+          "Career",
+          "Profession",
+          "Status",
+          "Reputation",
+          "Government",
+          "Authority",
+          "Father",
+          "Honor",
+          "Knees"
+        ],
+        "secondary_significations": [
+          "Power",
+          "Command",
+          "Respect",
+          "Public recognition",
+          "Activities",
+          "Deeds",
+          "Fame"
+        ],
+        "body_parts": [
+          "Knees",
+          "Joints",
+          "Bones"
+        ],
+        "opposite_bhava": 4,
+        "trikona_bhavas": [
+          2,
+          6,
+          10
+        ],
+        "kendra_bhavas": [
+          1,
+          4,
+          7,
+          10
+        ]
+      },
+      "11": {
+        "number": 11,
+        "name": "Labha/Aya Bhava",
+        "sanskrit_name": "Labha Bhava",
+        "cusp_degree": 15.630486544212886,
+        "rasi": "Aries",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Air",
+        "nature": "Upachaya",
+        "karaka": "Jupiter",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": true,
+        "is_dusthana": false,
+        "is_maraka": false,
+        "strength_category": "Grows with time",
+        "primary_significations": [
+          "Gains",
+          "Income",
+          "Friends",
+          "Elder siblings",
+          "Hopes",
+          "Wishes",
+          "Left ear",
+          "Profits",
+          "Recovery from illness"
+        ],
+        "secondary_significations": [
+          "Social circles",
+          "Organizations",
+          "Daughter-in-law",
+          "Ankle",
+          "Large intestine"
+        ],
+        "body_parts": [
+          "Calves",
+          "Left ear",
+          "Ankles",
+          "Shins"
+        ],
+        "opposite_bhava": 5,
+        "trikona_bhavas": [
+          3,
+          7,
+          11
+        ],
+        "kendra_bhavas": [
+          2,
+          5,
+          8,
+          11
+        ]
+      },
+      "12": {
+        "number": 12,
+        "name": "Vyaya/Moksha Bhava",
+        "sanskrit_name": "Vyaya Bhava",
+        "cusp_degree": 45.630486544212886,
+        "rasi": "Taurus",
+        "degrees_in_rasi": 15.630486544212886,
+        "element": "Water",
+        "nature": "Dusthana",
+        "karaka": "Saturn",
+        "is_kendra": false,
+        "is_trikona": false,
+        "is_upachaya": false,
+        "is_dusthana": true,
+        "is_maraka": false,
+        "strength_category": "Weak",
+        "primary_significations": [
+          "Losses",
+          "Expenses",
+          "Foreign lands",
+          "Spirituality",
+          "Liberation",
+          "Hospitals",
+          "Prisons",
+          "Sleep",
+          "Feet",
+          "Left eye"
+        ],
+        "secondary_significations": [
+          "Charity",
+          "Donations",
+          "Meditation",
+          "Isolation",
+          "Secret enemies",
+          "Bed comforts",
+          "Dreams"
+        ],
+        "body_parts": [
+          "Feet",
+          "Toes",
+          "Left eye"
+        ],
+        "opposite_bhava": 6,
+        "trikona_bhavas": [
+          4,
+          8,
+          12
+        ],
+        "kendra_bhavas": [
+          3,
+          6,
+          9,
+          12
+        ]
+      }
+    },
+    "aspects": {
+      "all_aspects": {
+        "Sun": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 79.69999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 164.70000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 9.799999999999955,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 165.19999999999996,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 20.399999999999977,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 60.10000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 110.09999999999997,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.89999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        },
+        "Moon": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 79.69999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 115.60000000000001,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.9,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 85.49999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 59.300000000000004,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 139.8,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 30.39999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 149.59999999999997,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        },
+        "Mars": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 164.70000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 115.60000000000001,
+            "strongest_aspect": {
+              "angle": 120,
+              "orb_category": "wide",
+              "strength": 0.5,
+              "exact_orb": 4.3999999999999915
+            },
+            "all_aspects": [
+              {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.3999999999999915
+              }
+            ],
+            "total_strength": 0.5,
+            "primary_angle": 120,
+            "orb_category": "wide"
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 174.5,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.5
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 180,
+            "orb_category": "very_wide"
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 30.100000000000023,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 174.9,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.099999999999994
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 180,
+            "orb_category": "very_wide"
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 104.6,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 85.20000000000002,
+            "strongest_aspect": {
+              "angle": 90,
+              "orb_category": "wide",
+              "strength": 0.5,
+              "exact_orb": 4.799999999999983
+            },
+            "all_aspects": [
+              {
+                "angle": 90,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.799999999999983
+              }
+            ],
+            "total_strength": 0.5,
+            "primary_angle": 90,
+            "orb_category": "wide"
+          },
+          "Ketu": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 94.80000000000004,
+            "strongest_aspect": {
+              "angle": 90,
+              "orb_category": "wide",
+              "strength": 0.5,
+              "exact_orb": 4.80000000000004
+            },
+            "all_aspects": [
+              {
+                "angle": 90,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.80000000000004
+              }
+            ],
+            "total_strength": 0.5,
+            "primary_angle": 90,
+            "orb_category": "wide"
+          }
+        },
+        "Mercury": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 9.799999999999955,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.9,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 174.5,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.5
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 180,
+            "orb_category": "very_wide"
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 155.39999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 10.599999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.89999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 100.3,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 79.69999999999993,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        },
+        "Jupiter": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 165.19999999999996,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 85.49999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 30.100000000000023,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 155.39999999999998,
+            "strongest_aspect": {
+              "angle": 150,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.399999999999977
+            },
+            "all_aspects": [
+              {
+                "angle": 150,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.399999999999977
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 150,
+            "orb_category": "very_wide"
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 144.79999999999998,
+            "strongest_aspect": {
+              "angle": 150,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.200000000000017
+            },
+            "all_aspects": [
+              {
+                "angle": 150,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.200000000000017
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 150,
+            "orb_category": "very_wide"
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 134.70000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 55.099999999999994,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 124.90000000000006,
+            "strongest_aspect": {
+              "angle": 120,
+              "orb_category": "wide",
+              "strength": 0.5,
+              "exact_orb": 4.9000000000000625
+            },
+            "all_aspects": [
+              {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.9000000000000625
+              }
+            ],
+            "total_strength": 0.5,
+            "primary_angle": 120,
+            "orb_category": "wide"
+          }
+        },
+        "Venus": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 20.399999999999977,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 59.300000000000004,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 174.9,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "very_wide",
+              "strength": 0.25,
+              "exact_orb": 5.099999999999994
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              }
+            ],
+            "total_strength": 0.25,
+            "primary_angle": 180,
+            "orb_category": "very_wide"
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 10.599999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 144.79999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 80.5,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 89.69999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 90.29999999999995,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        },
+        "Saturn": {
+          "Sun": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 60.10000000000002,
+            "strongest_aspect": {
+              "angle": 60,
+              "orb_category": "exact",
+              "strength": 1.0,
+              "exact_orb": 0.10000000000002274
+            },
+            "all_aspects": [
+              {
+                "angle": 60,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.10000000000002274
+              }
+            ],
+            "total_strength": 1.0,
+            "primary_angle": 60,
+            "orb_category": "exact"
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 139.8,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 104.6,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.89999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 134.70000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 80.5,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 170.2,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 9.799999999999955,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        },
+        "Rahu": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 110.09999999999997,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 30.39999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 85.20000000000002,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 100.3,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 55.099999999999994,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 89.69999999999999,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 170.2,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Ketu": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 179.99999999999994,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "exact",
+              "strength": 1.0,
+              "exact_orb": 5.684341886080802e-14
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              }
+            ],
+            "total_strength": 1.0,
+            "primary_angle": 180,
+            "orb_category": "exact"
+          }
+        },
+        "Ketu": {
+          "Sun": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 69.89999999999998,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Moon": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 149.59999999999997,
+            "strongest_aspect": {
+              "angle": 150,
+              "orb_category": "exact",
+              "strength": 1.0,
+              "exact_orb": 0.4000000000000341
+            },
+            "all_aspects": [
+              {
+                "angle": 150,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.4000000000000341
+              }
+            ],
+            "total_strength": 1.0,
+            "primary_angle": 150,
+            "orb_category": "exact"
+          },
+          "Mars": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 94.80000000000004,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Mercury": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 79.69999999999993,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Jupiter": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 124.90000000000006,
+            "strongest_aspect": {
+              "angle": 120,
+              "orb_category": "wide",
+              "strength": 0.5,
+              "exact_orb": 4.9000000000000625
+            },
+            "all_aspects": [
+              {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.9000000000000625
+              }
+            ],
+            "total_strength": 0.5,
+            "primary_angle": 120,
+            "orb_category": "wide"
+          },
+          "Venus": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 90.29999999999995,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Saturn": {
+            "is_aspecting": false,
+            "aspect_type": "No Aspect",
+            "angular_distance": 9.799999999999955,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          },
+          "Rahu": {
+            "is_aspecting": true,
+            "aspect_type": "Graha Drishti",
+            "angular_distance": 179.99999999999994,
+            "strongest_aspect": {
+              "angle": 180,
+              "orb_category": "exact",
+              "strength": 1.0,
+              "exact_orb": 5.684341886080802e-14
+            },
+            "all_aspects": [
+              {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              }
+            ],
+            "total_strength": 1.0,
+            "primary_angle": 180,
+            "orb_category": "exact"
+          },
+          "Ketu": {
+            "is_aspecting": false,
+            "aspect_type": "Self",
+            "angular_distance": 0.0,
+            "orb_category": null,
+            "aspect_strength": 0.0,
+            "aspect_angles": []
+          }
+        }
+      },
+      "patterns": {
+        "conjunctions": [],
+        "mutual_aspects": [
+          {
+            "graha1": "Mars",
+            "graha2": "Mercury",
+            "aspect1_to_2": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.5,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.5
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            },
+            "aspect2_to_1": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.5,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.5
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            },
+            "combined_strength": 0.5,
+            "angular_distance": 174.5
+          },
+          {
+            "graha1": "Mars",
+            "graha2": "Venus",
+            "aspect1_to_2": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.9,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.099999999999994
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            },
+            "aspect2_to_1": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.9,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.099999999999994
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            },
+            "combined_strength": 0.5,
+            "angular_distance": 174.9
+          },
+          {
+            "graha1": "Jupiter",
+            "graha2": "Ketu",
+            "aspect1_to_2": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 124.90000000000006,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.9000000000000625
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 4.9000000000000625
+                }
+              ],
+              "total_strength": 0.5,
+              "primary_angle": 120,
+              "orb_category": "wide"
+            },
+            "aspect2_to_1": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 124.90000000000006,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.9000000000000625
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 4.9000000000000625
+                }
+              ],
+              "total_strength": 0.5,
+              "primary_angle": 120,
+              "orb_category": "wide"
+            },
+            "combined_strength": 1.0,
+            "angular_distance": 124.90000000000006
+          },
+          {
+            "graha1": "Rahu",
+            "graha2": "Ketu",
+            "aspect1_to_2": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            },
+            "aspect2_to_1": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            },
+            "combined_strength": 2.0,
+            "angular_distance": 179.99999999999994
+          }
+        ],
+        "strong_aspects": [
+          {
+            "aspecting_graha": "Saturn",
+            "aspected_graha": "Sun",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 60.10000000000002,
+              "strongest_aspect": {
+                "angle": 60,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.10000000000002274
+              },
+              "all_aspects": [
+                {
+                  "angle": 60,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 0.10000000000002274
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 60,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Rahu",
+            "aspected_graha": "Ketu",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Ketu",
+            "aspected_graha": "Moon",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 149.59999999999997,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.4000000000000341
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 0.4000000000000341
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 150,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Ketu",
+            "aspected_graha": "Rahu",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            }
+          }
+        ],
+        "weak_aspects": [
+          {
+            "aspecting_graha": "Mars",
+            "aspected_graha": "Mercury",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.5,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.5
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            }
+          },
+          {
+            "aspecting_graha": "Mars",
+            "aspected_graha": "Venus",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.9,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.099999999999994
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            }
+          },
+          {
+            "aspecting_graha": "Mercury",
+            "aspected_graha": "Mars",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.5,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.5
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.5
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            }
+          },
+          {
+            "aspecting_graha": "Jupiter",
+            "aspected_graha": "Mercury",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 155.39999999999998,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.399999999999977
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.399999999999977
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 150,
+              "orb_category": "very_wide"
+            }
+          },
+          {
+            "aspecting_graha": "Jupiter",
+            "aspected_graha": "Venus",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 144.79999999999998,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.200000000000017
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.200000000000017
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 150,
+              "orb_category": "very_wide"
+            }
+          },
+          {
+            "aspecting_graha": "Venus",
+            "aspected_graha": "Mars",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 174.9,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 5.099999999999994
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 5.099999999999994
+                }
+              ],
+              "total_strength": 0.25,
+              "primary_angle": 180,
+              "orb_category": "very_wide"
+            }
+          }
+        ],
+        "exact_aspects": [
+          {
+            "aspecting_graha": "Saturn",
+            "aspected_graha": "Sun",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 60.10000000000002,
+              "strongest_aspect": {
+                "angle": 60,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.10000000000002274
+              },
+              "all_aspects": [
+                {
+                  "angle": 60,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 0.10000000000002274
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 60,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Rahu",
+            "aspected_graha": "Ketu",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Ketu",
+            "aspected_graha": "Moon",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 149.59999999999997,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 0.4000000000000341
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 0.4000000000000341
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 150,
+              "orb_category": "exact"
+            }
+          },
+          {
+            "aspecting_graha": "Ketu",
+            "aspected_graha": "Rahu",
+            "aspect_info": {
+              "is_aspecting": true,
+              "aspect_type": "Graha Drishti",
+              "angular_distance": 179.99999999999994,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "exact",
+                "strength": 1.0,
+                "exact_orb": 5.684341886080802e-14
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "exact",
+                  "strength": 1.0,
+                  "exact_orb": 5.684341886080802e-14
+                }
+              ],
+              "total_strength": 1.0,
+              "primary_angle": 180,
+              "orb_category": "exact"
+            }
+          }
+        ]
+      },
+      "summary": {
+        "total_aspects": 15,
+        "average_strength": 0.5333333333333333,
+        "total_conjunctions": 0,
+        "total_mutual_aspects": 4,
+        "strong_aspects_count": 4,
+        "exact_aspects_count": 4,
+        "aspect_type_distribution": {
+          "120": 3,
+          "180": 6,
+          "90": 2,
+          "150": 3,
+          "60": 1
+        },
+        "most_aspected_graha": "Ketu",
+        "most_aspecting_graha": "Mars"
+      },
+      "graha_count": 9
+    },
+    "bhava_analysis": {
+      "ascendant_longitude": 75.63048654421289,
+      "house_system": "Equal",
+      "all_bhavas": {
+        "1": {
+          "bhava_info": {
+            "number": 1,
+            "name": "Lagna/Tanu Bhava",
+            "sanskrit_name": "Tanu Bhava",
+            "cusp_degree": 75.63048654421289,
+            "rasi": "Gemini",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Fire",
+            "nature": "Kendra",
+            "karaka": "Sun",
+            "is_kendra": true,
+            "is_trikona": true,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Self",
+              "Personality",
+              "Physical body",
+              "Health",
+              "Appearance",
+              "Character",
+              "Temperament",
+              "Identity",
+              "Birth",
+              "Beginning"
+            ],
+            "secondary_significations": [
+              "Fame",
+              "Honor",
+              "Dignity",
+              "Head region",
+              "Overall vitality",
+              "Complexion",
+              "Form",
+              "Disposition",
+              "Nature"
+            ],
+            "body_parts": [
+              "Head",
+              "Brain",
+              "Face",
+              "Skull"
+            ],
+            "opposite_bhava": 7,
+            "trikona_bhavas": [
+              1,
+              5,
+              9
+            ],
+            "kendra_bhavas": [
+              1,
+              4,
+              7,
+              10
+            ]
+          },
+          "grahas_placed": [
+            "Rahu"
+          ],
+          "bhava_lord": "Mercury",
+          "lord_placement": {
+            "lord_graha": "Mercury",
+            "placed_in_bhava": 10,
+            "placed_in_rasi": "Aries",
+            "longitude": 1.5845551040003052,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 9
+          },
+          "strength_analysis": {
+            "total_strength": 0.6075000000000002,
+            "strength_category": "Strong",
+            "strength_factors": {
+              "base_strength": 1.0,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.35,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.5
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Kendra",
+            "contributing_factors": [
+              "Strong base_strength",
+              "Strong lord_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [
+              {
+                "type": "Lord in Kendra-Trikona",
+                "lord": "Mercury",
+                "from_bhava": 1,
+                "to_bhava": 10
+              }
+            ],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Ketu": {
+              "is_aspecting": true,
+              "graha": "Ketu",
+              "target_longitude": 75.63048654421289,
+              "angular_distance": 153.74593144021253,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.74593144021253
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.74593144021253
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Self",
+            "Personality",
+            "Physical body",
+            "Health",
+            "Appearance",
+            "Character",
+            "Temperament",
+            "Identity",
+            "Birth",
+            "Beginning",
+            "Fame",
+            "Honor",
+            "Dignity",
+            "Head region",
+            "Overall vitality",
+            "Complexion",
+            "Form",
+            "Disposition",
+            "Nature"
+          ]
+        },
+        "2": {
+          "bhava_info": {
+            "number": 2,
+            "name": "Dhana Bhava",
+            "sanskrit_name": "Dhana Bhava",
+            "cusp_degree": 105.63048654421289,
+            "rasi": "Cancer",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Earth",
+            "nature": "Maraka",
+            "karaka": "Jupiter",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": true,
+            "strength_category": "Moderate",
+            "primary_significations": [
+              "Wealth",
+              "Money",
+              "Possessions",
+              "Family",
+              "Speech",
+              "Food",
+              "Face",
+              "Right eye",
+              "Accumulated wealth"
+            ],
+            "secondary_significations": [
+              "Tongue",
+              "Teeth",
+              "Nails",
+              "Precious metals",
+              "Gems",
+              "Learning",
+              "Education",
+              "Family traditions",
+              "Values"
+            ],
+            "body_parts": [
+              "Face",
+              "Right eye",
+              "Throat",
+              "Neck",
+              "Tongue"
+            ],
+            "opposite_bhava": 8,
+            "trikona_bhavas": [
+              2,
+              6,
+              10
+            ],
+            "kendra_bhavas": [
+              2,
+              5,
+              8,
+              11
+            ]
+          },
+          "grahas_placed": [],
+          "bhava_lord": "Moon",
+          "lord_placement": {
+            "lord_graha": "Moon",
+            "placed_in_bhava": 12,
+            "placed_in_rasi": "Gemini",
+            "longitude": 71.48455510400031,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 10
+          },
+          "strength_analysis": {
+            "total_strength": 0.375,
+            "strength_category": "Weak",
+            "strength_factors": {
+              "base_strength": 0.5,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.3,
+              "aspect_strength": 0.30000000000000004,
+              "rasi_strength": 0.6499999999999999
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Maraka",
+            "contributing_factors": [
+              "Weak lord_strength",
+              "Weak occupant_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Saturn": {
+              "is_aspecting": true,
+              "graha": "Saturn",
+              "target_longitude": 105.63048654421289,
+              "angular_distance": 173.94593144021258,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.054068559787424
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.054068559787424
+                }
+              ],
+              "total_strength": 0.25
+            },
+            "Ketu": {
+              "is_aspecting": true,
+              "graha": "Ketu",
+              "target_longitude": 105.63048654421289,
+              "angular_distance": 176.25406855978747,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.74593144021253
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.74593144021253
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Wealth",
+            "Money",
+            "Possessions",
+            "Family",
+            "Speech",
+            "Food",
+            "Face",
+            "Right eye",
+            "Accumulated wealth",
+            "Tongue",
+            "Teeth",
+            "Nails",
+            "Precious metals",
+            "Gems",
+            "Learning",
+            "Education",
+            "Family traditions",
+            "Values"
+          ]
+        },
+        "3": {
+          "bhava_info": {
+            "number": 3,
+            "name": "Sahaja/Parakrama Bhava",
+            "sanskrit_name": "Sahaja Bhava",
+            "cusp_degree": 135.63048654421289,
+            "rasi": "Leo",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Air",
+            "nature": "Upachaya",
+            "karaka": "Mars",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": true,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Weak initially, grows with time",
+            "primary_significations": [
+              "Siblings",
+              "Courage",
+              "Efforts",
+              "Short journeys",
+              "Communication",
+              "Skills",
+              "Talents",
+              "Arms",
+              "Right ear",
+              "Neighbors"
+            ],
+            "secondary_significations": [
+              "Writing",
+              "Arts",
+              "Dance",
+              "Music",
+              "Heroism",
+              "Enterprise",
+              "Signing documents",
+              "Agreements",
+              "Prowess"
+            ],
+            "body_parts": [
+              "Arms",
+              "Hands",
+              "Shoulders",
+              "Right ear",
+              "Throat"
+            ],
+            "opposite_bhava": 9,
+            "trikona_bhavas": [
+              3,
+              7,
+              11
+            ],
+            "kendra_bhavas": [
+              3,
+              6,
+              9,
+              12
+            ]
+          },
+          "grahas_placed": [
+            "Jupiter"
+          ],
+          "bhava_lord": "Sun",
+          "lord_placement": {
+            "lord_graha": "Sun",
+            "placed_in_bhava": 10,
+            "placed_in_rasi": "Pisces",
+            "longitude": 351.78455510400033,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 7
+          },
+          "strength_analysis": {
+            "total_strength": 0.615,
+            "strength_category": "Strong",
+            "strength_factors": {
+              "base_strength": 0.6,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.6,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.75
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Upachaya",
+            "contributing_factors": [
+              "Strong lord_strength",
+              "Strong rasi_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [
+              {
+                "type": "Parivartana Yoga",
+                "bhava1": 3,
+                "bhava2": 10,
+                "lord1": "Sun",
+                "lord2": "Jupiter"
+              }
+            ],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Ketu": {
+              "is_aspecting": true,
+              "graha": "Ketu",
+              "target_longitude": 135.63048654421289,
+              "angular_distance": 146.25406855978747,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.74593144021253
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.74593144021253
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Siblings",
+            "Courage",
+            "Efforts",
+            "Short journeys",
+            "Communication",
+            "Skills",
+            "Talents",
+            "Arms",
+            "Right ear",
+            "Neighbors",
+            "Writing",
+            "Arts",
+            "Dance",
+            "Music",
+            "Heroism",
+            "Enterprise",
+            "Signing documents",
+            "Agreements",
+            "Prowess"
+          ]
+        },
+        "4": {
+          "bhava_info": {
+            "number": 4,
+            "name": "Sukha/Matru Bhava",
+            "sanskrit_name": "Sukha Bhava",
+            "cusp_degree": 165.63048654421289,
+            "rasi": "Virgo",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Water",
+            "nature": "Kendra",
+            "karaka": "Moon",
+            "is_kendra": true,
+            "is_trikona": false,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Mother",
+              "Home",
+              "Property",
+              "Land",
+              "Vehicles",
+              "Happiness",
+              "Comforts",
+              "Education",
+              "Heart",
+              "Chest"
+            ],
+            "secondary_significations": [
+              "Emotions",
+              "Mind",
+              "Gardens",
+              "Wells",
+              "Buildings",
+              "Homeland",
+              "Academic degrees",
+              "Private life"
+            ],
+            "body_parts": [
+              "Heart",
+              "Chest",
+              "Lungs",
+              "Ribs"
+            ],
+            "opposite_bhava": 10,
+            "trikona_bhavas": [
+              4,
+              8,
+              12
+            ],
+            "kendra_bhavas": [
+              1,
+              4,
+              7,
+              10
+            ]
+          },
+          "grahas_placed": [
+            "Mars"
+          ],
+          "bhava_lord": "Mercury",
+          "lord_placement": {
+            "lord_graha": "Mercury",
+            "placed_in_bhava": 10,
+            "placed_in_rasi": "Aries",
+            "longitude": 1.5845551040003052,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 6
+          },
+          "strength_analysis": {
+            "total_strength": 0.5825,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.8,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.45,
+              "aspect_strength": 0.30000000000000004,
+              "rasi_strength": 0.55
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Kendra",
+            "contributing_factors": [
+              "Strong base_strength",
+              "Strong lord_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Sun": {
+              "is_aspecting": true,
+              "graha": "Sun",
+              "target_longitude": 165.63048654421289,
+              "angular_distance": 173.84593144021255,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.154068559787447
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.154068559787447
+                }
+              ],
+              "total_strength": 0.25
+            },
+            "Ketu": {
+              "is_aspecting": true,
+              "graha": "Ketu",
+              "target_longitude": 165.63048654421289,
+              "angular_distance": 116.25406855978747,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.74593144021253
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.74593144021253
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Mother",
+            "Home",
+            "Property",
+            "Land",
+            "Vehicles",
+            "Happiness",
+            "Comforts",
+            "Education",
+            "Heart",
+            "Chest",
+            "Emotions",
+            "Mind",
+            "Gardens",
+            "Wells",
+            "Buildings",
+            "Homeland",
+            "Academic degrees",
+            "Private life"
+          ]
+        },
+        "5": {
+          "bhava_info": {
+            "number": 5,
+            "name": "Putra/Vidya Bhava",
+            "sanskrit_name": "Putra Bhava",
+            "cusp_degree": 195.63048654421289,
+            "rasi": "Libra",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Fire",
+            "nature": "Trikona",
+            "karaka": "Jupiter",
+            "is_kendra": false,
+            "is_trikona": true,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Children",
+              "Creativity",
+              "Intelligence",
+              "Education",
+              "Romance",
+              "Speculation",
+              "Investments",
+              "Purva punya",
+              "Stomach"
+            ],
+            "secondary_significations": [
+              "Mantras",
+              "Spiritual practices",
+              "Authorship",
+              "Sports",
+              "Entertainment",
+              "Love affairs",
+              "Pregnancy"
+            ],
+            "body_parts": [
+              "Stomach",
+              "Upper abdomen",
+              "Liver",
+              "Gall bladder"
+            ],
+            "opposite_bhava": 11,
+            "trikona_bhavas": [
+              1,
+              5,
+              9
+            ],
+            "kendra_bhavas": [
+              2,
+              5,
+              8,
+              11
+            ]
+          },
+          "grahas_placed": [],
+          "bhava_lord": "Venus",
+          "lord_placement": {
+            "lord_graha": "Venus",
+            "placed_in_bhava": 10,
+            "placed_in_rasi": "Aries",
+            "longitude": 12.184555104000303,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 5
+          },
+          "strength_analysis": {
+            "total_strength": 0.565,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.8,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.3,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.6
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Trikona",
+            "contributing_factors": [
+              "Strong base_strength",
+              "Strong lord_strength",
+              "Weak occupant_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [
+              {
+                "type": "Lord in Kendra-Trikona",
+                "lord": "Venus",
+                "from_bhava": 5,
+                "to_bhava": 10
+              }
+            ],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Venus": {
+              "is_aspecting": true,
+              "graha": "Venus",
+              "target_longitude": 195.63048654421289,
+              "angular_distance": 176.55406855978742,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.4459314402125756
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.4459314402125756
+                }
+              ],
+              "total_strength": 0.5
+            },
+            "Saturn": {
+              "is_aspecting": true,
+              "graha": "Saturn",
+              "target_longitude": 195.63048654421289,
+              "angular_distance": 96.05406855978742,
+              "strongest_aspect": {
+                "angle": 90,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.054068559787424
+              },
+              "all_aspects": [
+                {
+                  "angle": 90,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.054068559787424
+                }
+              ],
+              "total_strength": 0.25
+            }
+          },
+          "significations": [
+            "Children",
+            "Creativity",
+            "Intelligence",
+            "Education",
+            "Romance",
+            "Speculation",
+            "Investments",
+            "Purva punya",
+            "Stomach",
+            "Mantras",
+            "Spiritual practices",
+            "Authorship",
+            "Sports",
+            "Entertainment",
+            "Love affairs",
+            "Pregnancy"
+          ]
+        },
+        "6": {
+          "bhava_info": {
+            "number": 6,
+            "name": "Ari/Roga Bhava",
+            "sanskrit_name": "Ari Bhava",
+            "cusp_degree": 225.63048654421289,
+            "rasi": "Scorpio",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Earth",
+            "nature": "Upachaya",
+            "karaka": "Mars/Saturn",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": true,
+            "is_dusthana": true,
+            "is_maraka": false,
+            "strength_category": "Weak initially, grows with time",
+            "primary_significations": [
+              "Enemies",
+              "Diseases",
+              "Debts",
+              "Service",
+              "Employees",
+              "Obstacles",
+              "Litigation",
+              "Competition",
+              "Lower abdomen"
+            ],
+            "secondary_significations": [
+              "Immune system",
+              "Daily work",
+              "Routine",
+              "Pets",
+              "Uncle/Aunt (maternal)",
+              "Step-mother",
+              "Theft"
+            ],
+            "body_parts": [
+              "Lower abdomen",
+              "Kidneys",
+              "Small intestine"
+            ],
+            "opposite_bhava": 12,
+            "trikona_bhavas": [
+              2,
+              6,
+              10
+            ],
+            "kendra_bhavas": [
+              3,
+              6,
+              9,
+              12
+            ]
+          },
+          "grahas_placed": [],
+          "bhava_lord": "Mars",
+          "lord_placement": {
+            "lord_graha": "Mars",
+            "placed_in_bhava": 4,
+            "placed_in_rasi": "Libra",
+            "longitude": 187.08455510400032,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 10
+          },
+          "strength_analysis": {
+            "total_strength": 0.5199999999999999,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.6,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.3,
+              "aspect_strength": 0.30000000000000004,
+              "rasi_strength": 0.7
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Upachaya",
+            "contributing_factors": [
+              "Strong lord_strength",
+              "Weak occupant_strength",
+              "Strong rasi_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Saturn": {
+              "is_aspecting": true,
+              "graha": "Saturn",
+              "target_longitude": 225.63048654421289,
+              "angular_distance": 66.05406855978742,
+              "strongest_aspect": {
+                "angle": 60,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.054068559787424
+              },
+              "all_aspects": [
+                {
+                  "angle": 60,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.054068559787424
+                }
+              ],
+              "total_strength": 0.25
+            },
+            "Rahu": {
+              "is_aspecting": true,
+              "graha": "Rahu",
+              "target_longitude": 225.63048654421289,
+              "angular_distance": 123.74593144021259,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.745931440212587
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.745931440212587
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Enemies",
+            "Diseases",
+            "Debts",
+            "Service",
+            "Employees",
+            "Obstacles",
+            "Litigation",
+            "Competition",
+            "Lower abdomen",
+            "Immune system",
+            "Daily work",
+            "Routine",
+            "Pets",
+            "Uncle/Aunt (maternal)",
+            "Step-mother",
+            "Theft"
+          ]
+        },
+        "7": {
+          "bhava_info": {
+            "number": 7,
+            "name": "Kalatra/Jaya Bhava",
+            "sanskrit_name": "Kalatra Bhava",
+            "cusp_degree": 255.63048654421289,
+            "rasi": "Sagittarius",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Air",
+            "nature": "Kendra/Maraka",
+            "karaka": "Venus",
+            "is_kendra": true,
+            "is_trikona": false,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": true,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Spouse",
+              "Marriage",
+              "Business partnerships",
+              "Public life",
+              "Travel",
+              "Trade",
+              "Death",
+              "Sexual organs"
+            ],
+            "secondary_significations": [
+              "Passion",
+              "Desires",
+              "Public image",
+              "Cooperation",
+              "Diplomacy",
+              "Balance",
+              "Open enemies"
+            ],
+            "body_parts": [
+              "Sexual organs",
+              "Kidneys",
+              "Lower back"
+            ],
+            "opposite_bhava": 1,
+            "trikona_bhavas": [
+              3,
+              7,
+              11
+            ],
+            "kendra_bhavas": [
+              1,
+              4,
+              7,
+              10
+            ]
+          },
+          "grahas_placed": [
+            "Ketu"
+          ],
+          "bhava_lord": "Jupiter",
+          "lord_placement": {
+            "lord_graha": "Jupiter",
+            "placed_in_bhava": 3,
+            "placed_in_rasi": "Virgo",
+            "longitude": 156.9845551040003,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 8
+          },
+          "strength_analysis": {
+            "total_strength": 0.5325000000000001,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.8,
+              "lord_strength": 0.5,
+              "occupant_strength": 0.35,
+              "aspect_strength": 0.5,
+              "rasi_strength": 0.6
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Kendra/Maraka",
+            "contributing_factors": [
+              "Strong base_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Moon": {
+              "is_aspecting": true,
+              "graha": "Moon",
+              "target_longitude": 255.63048654421289,
+              "angular_distance": 175.85406855978744,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 4.145931440212564
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 4.145931440212564
+                }
+              ],
+              "total_strength": 0.5
+            },
+            "Rahu": {
+              "is_aspecting": true,
+              "graha": "Rahu",
+              "target_longitude": 255.63048654421289,
+              "angular_distance": 153.7459314402126,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.745931440212587
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.745931440212587
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Spouse",
+            "Marriage",
+            "Business partnerships",
+            "Public life",
+            "Travel",
+            "Trade",
+            "Death",
+            "Sexual organs",
+            "Passion",
+            "Desires",
+            "Public image",
+            "Cooperation",
+            "Diplomacy",
+            "Balance",
+            "Open enemies"
+          ]
+        },
+        "8": {
+          "bhava_info": {
+            "number": 8,
+            "name": "Ayu/Mrityu Bhava",
+            "sanskrit_name": "Ayu Bhava",
+            "cusp_degree": 285.6304865442129,
+            "rasi": "Capricorn",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Water",
+            "nature": "Dusthana",
+            "karaka": "Saturn",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": false,
+            "is_dusthana": true,
+            "is_maraka": false,
+            "strength_category": "Weak",
+            "primary_significations": [
+              "Longevity",
+              "Death",
+              "Occult",
+              "Mysteries",
+              "Transformation",
+              "Inheritance",
+              "Insurance",
+              "Hidden wealth",
+              "Excretory organs"
+            ],
+            "secondary_significations": [
+              "Accidents",
+              "Surgery",
+              "Research",
+              "Investigation",
+              "Spouse's wealth",
+              "Chronic diseases",
+              "Disgrace"
+            ],
+            "body_parts": [
+              "Excretory organs",
+              "Reproductive system",
+              "Colon"
+            ],
+            "opposite_bhava": 2,
+            "trikona_bhavas": [
+              4,
+              8,
+              12
+            ],
+            "kendra_bhavas": [
+              2,
+              5,
+              8,
+              11
+            ]
+          },
+          "grahas_placed": [
+            "Saturn"
+          ],
+          "bhava_lord": "Saturn",
+          "lord_placement": {
+            "lord_graha": "Saturn",
+            "placed_in_bhava": 8,
+            "placed_in_rasi": "Capricorn",
+            "longitude": 291.6845551040003,
+            "dignity": "Own Sign",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 12
+          },
+          "strength_analysis": {
+            "total_strength": 0.5325,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.2,
+              "lord_strength": 0.6000000000000001,
+              "occupant_strength": 0.75,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.6499999999999999
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Dusthana",
+            "contributing_factors": [
+              "Weak base_strength",
+              "Strong occupant_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [
+              {
+                "type": "Parivartana Yoga",
+                "bhava1": 8,
+                "bhava2": 8,
+                "lord1": "Saturn",
+                "lord2": "Saturn"
+              }
+            ],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Rahu": {
+              "is_aspecting": true,
+              "graha": "Rahu",
+              "target_longitude": 285.6304865442129,
+              "angular_distance": 176.2540685597874,
+              "strongest_aspect": {
+                "angle": 180,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.745931440212587
+              },
+              "all_aspects": [
+                {
+                  "angle": 180,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.745931440212587
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Longevity",
+            "Death",
+            "Occult",
+            "Mysteries",
+            "Transformation",
+            "Inheritance",
+            "Insurance",
+            "Hidden wealth",
+            "Excretory organs",
+            "Accidents",
+            "Surgery",
+            "Research",
+            "Investigation",
+            "Spouse's wealth",
+            "Chronic diseases",
+            "Disgrace"
+          ]
+        },
+        "9": {
+          "bhava_info": {
+            "number": 9,
+            "name": "Bhagya/Dharma Bhava",
+            "sanskrit_name": "Bhagya Bhava",
+            "cusp_degree": 315.6304865442129,
+            "rasi": "Aquarius",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Fire",
+            "nature": "Trikona",
+            "karaka": "Jupiter/Sun",
+            "is_kendra": false,
+            "is_trikona": true,
+            "is_upachaya": false,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Fortune",
+              "Religion",
+              "Philosophy",
+              "Higher learning",
+              "Father",
+              "Teacher",
+              "Long journeys",
+              "Pilgrimage",
+              "Hips"
+            ],
+            "secondary_significations": [
+              "Spirituality",
+              "Wisdom",
+              "Publishing",
+              "Foreign connections",
+              "Grandchildren",
+              "Dreams",
+              "Intuition"
+            ],
+            "body_parts": [
+              "Hips",
+              "Thighs",
+              "Buttocks"
+            ],
+            "opposite_bhava": 3,
+            "trikona_bhavas": [
+              1,
+              5,
+              9
+            ],
+            "kendra_bhavas": [
+              3,
+              6,
+              9,
+              12
+            ]
+          },
+          "grahas_placed": [],
+          "bhava_lord": "Saturn",
+          "lord_placement": {
+            "lord_graha": "Saturn",
+            "placed_in_bhava": 8,
+            "placed_in_rasi": "Capricorn",
+            "longitude": 291.6845551040003,
+            "dignity": "Own Sign",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 11
+          },
+          "strength_analysis": {
+            "total_strength": 0.54,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.8,
+              "lord_strength": 0.6000000000000001,
+              "occupant_strength": 0.3,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.65
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Trikona",
+            "contributing_factors": [
+              "Strong base_strength",
+              "Weak occupant_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Rahu": {
+              "is_aspecting": true,
+              "graha": "Rahu",
+              "target_longitude": 315.6304865442129,
+              "angular_distance": 146.2540685597874,
+              "strongest_aspect": {
+                "angle": 150,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.745931440212587
+              },
+              "all_aspects": [
+                {
+                  "angle": 150,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.745931440212587
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Fortune",
+            "Religion",
+            "Philosophy",
+            "Higher learning",
+            "Father",
+            "Teacher",
+            "Long journeys",
+            "Pilgrimage",
+            "Hips",
+            "Spirituality",
+            "Wisdom",
+            "Publishing",
+            "Foreign connections",
+            "Grandchildren",
+            "Dreams",
+            "Intuition"
+          ]
+        },
+        "10": {
+          "bhava_info": {
+            "number": 10,
+            "name": "Karma/Rajya Bhava",
+            "sanskrit_name": "Karma Bhava",
+            "cusp_degree": 345.6304865442129,
+            "rasi": "Pisces",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Earth",
+            "nature": "Kendra",
+            "karaka": "Sun/Mercury/Jupiter/Saturn",
+            "is_kendra": true,
+            "is_trikona": false,
+            "is_upachaya": true,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Very Strong",
+            "primary_significations": [
+              "Career",
+              "Profession",
+              "Status",
+              "Reputation",
+              "Government",
+              "Authority",
+              "Father",
+              "Honor",
+              "Knees"
+            ],
+            "secondary_significations": [
+              "Power",
+              "Command",
+              "Respect",
+              "Public recognition",
+              "Activities",
+              "Deeds",
+              "Fame"
+            ],
+            "body_parts": [
+              "Knees",
+              "Joints",
+              "Bones"
+            ],
+            "opposite_bhava": 4,
+            "trikona_bhavas": [
+              2,
+              6,
+              10
+            ],
+            "kendra_bhavas": [
+              1,
+              4,
+              7,
+              10
+            ]
+          },
+          "grahas_placed": [
+            "Sun",
+            "Mercury",
+            "Venus"
+          ],
+          "bhava_lord": "Jupiter",
+          "lord_placement": {
+            "lord_graha": "Jupiter",
+            "placed_in_bhava": 3,
+            "placed_in_rasi": "Virgo",
+            "longitude": 156.9845551040003,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 5
+          },
+          "strength_analysis": {
+            "total_strength": 0.5475,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.8,
+              "lord_strength": 0.5,
+              "occupant_strength": 0.5499999999999999,
+              "aspect_strength": 0.30000000000000004,
+              "rasi_strength": 0.55
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Kendra",
+            "contributing_factors": [
+              "Strong base_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [
+              {
+                "type": "Parivartana Yoga",
+                "bhava1": 10,
+                "bhava2": 3,
+                "lord1": "Jupiter",
+                "lord2": "Sun"
+              }
+            ],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Saturn": {
+              "is_aspecting": true,
+              "graha": "Saturn",
+              "target_longitude": 345.6304865442129,
+              "angular_distance": 53.945931440212576,
+              "strongest_aspect": {
+                "angle": 60,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.054068559787424
+              },
+              "all_aspects": [
+                {
+                  "angle": 60,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.054068559787424
+                }
+              ],
+              "total_strength": 0.25
+            },
+            "Rahu": {
+              "is_aspecting": true,
+              "graha": "Rahu",
+              "target_longitude": 345.6304865442129,
+              "angular_distance": 116.25406855978741,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.745931440212587
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.745931440212587
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Career",
+            "Profession",
+            "Status",
+            "Reputation",
+            "Government",
+            "Authority",
+            "Father",
+            "Honor",
+            "Knees",
+            "Power",
+            "Command",
+            "Respect",
+            "Public recognition",
+            "Activities",
+            "Deeds",
+            "Fame"
+          ]
+        },
+        "11": {
+          "bhava_info": {
+            "number": 11,
+            "name": "Labha/Aya Bhava",
+            "sanskrit_name": "Labha Bhava",
+            "cusp_degree": 15.630486544212886,
+            "rasi": "Aries",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Air",
+            "nature": "Upachaya",
+            "karaka": "Jupiter",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": true,
+            "is_dusthana": false,
+            "is_maraka": false,
+            "strength_category": "Grows with time",
+            "primary_significations": [
+              "Gains",
+              "Income",
+              "Friends",
+              "Elder siblings",
+              "Hopes",
+              "Wishes",
+              "Left ear",
+              "Profits",
+              "Recovery from illness"
+            ],
+            "secondary_significations": [
+              "Social circles",
+              "Organizations",
+              "Daughter-in-law",
+              "Ankle",
+              "Large intestine"
+            ],
+            "body_parts": [
+              "Calves",
+              "Left ear",
+              "Ankles",
+              "Shins"
+            ],
+            "opposite_bhava": 5,
+            "trikona_bhavas": [
+              3,
+              7,
+              11
+            ],
+            "kendra_bhavas": [
+              2,
+              5,
+              8,
+              11
+            ]
+          },
+          "grahas_placed": [],
+          "bhava_lord": "Mars",
+          "lord_placement": {
+            "lord_graha": "Mars",
+            "placed_in_bhava": 4,
+            "placed_in_rasi": "Libra",
+            "longitude": 187.08455510400032,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 5
+          },
+          "strength_analysis": {
+            "total_strength": 0.5049999999999999,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.6,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.3,
+              "aspect_strength": 0.2,
+              "rasi_strength": 0.7
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Upachaya",
+            "contributing_factors": [
+              "Strong lord_strength",
+              "Weak occupant_strength",
+              "Weak aspect_strength",
+              "Strong rasi_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Saturn": {
+              "is_aspecting": true,
+              "graha": "Saturn",
+              "target_longitude": 15.630486544212886,
+              "angular_distance": 83.94593144021258,
+              "strongest_aspect": {
+                "angle": 90,
+                "orb_category": "very_wide",
+                "strength": 0.25,
+                "exact_orb": 6.054068559787424
+              },
+              "all_aspects": [
+                {
+                  "angle": 90,
+                  "orb_category": "very_wide",
+                  "strength": 0.25,
+                  "exact_orb": 6.054068559787424
+                }
+              ],
+              "total_strength": 0.25
+            }
+          },
+          "significations": [
+            "Gains",
+            "Income",
+            "Friends",
+            "Elder siblings",
+            "Hopes",
+            "Wishes",
+            "Left ear",
+            "Profits",
+            "Recovery from illness",
+            "Social circles",
+            "Organizations",
+            "Daughter-in-law",
+            "Ankle",
+            "Large intestine"
+          ]
+        },
+        "12": {
+          "bhava_info": {
+            "number": 12,
+            "name": "Vyaya/Moksha Bhava",
+            "sanskrit_name": "Vyaya Bhava",
+            "cusp_degree": 45.630486544212886,
+            "rasi": "Taurus",
+            "degrees_in_rasi": 15.630486544212886,
+            "element": "Water",
+            "nature": "Dusthana",
+            "karaka": "Saturn",
+            "is_kendra": false,
+            "is_trikona": false,
+            "is_upachaya": false,
+            "is_dusthana": true,
+            "is_maraka": false,
+            "strength_category": "Weak",
+            "primary_significations": [
+              "Losses",
+              "Expenses",
+              "Foreign lands",
+              "Spirituality",
+              "Liberation",
+              "Hospitals",
+              "Prisons",
+              "Sleep",
+              "Feet",
+              "Left eye"
+            ],
+            "secondary_significations": [
+              "Charity",
+              "Donations",
+              "Meditation",
+              "Isolation",
+              "Secret enemies",
+              "Bed comforts",
+              "Dreams"
+            ],
+            "body_parts": [
+              "Feet",
+              "Toes",
+              "Left eye"
+            ],
+            "opposite_bhava": 6,
+            "trikona_bhavas": [
+              4,
+              8,
+              12
+            ],
+            "kendra_bhavas": [
+              3,
+              6,
+              9,
+              12
+            ]
+          },
+          "grahas_placed": [
+            "Moon"
+          ],
+          "bhava_lord": "Venus",
+          "lord_placement": {
+            "lord_graha": "Venus",
+            "placed_in_bhava": 10,
+            "placed_in_rasi": "Aries",
+            "longitude": 12.184555104000303,
+            "dignity": "Neutral",
+            "is_retrograde": false,
+            "distance_from_own_bhava": 10
+          },
+          "strength_analysis": {
+            "total_strength": 0.53,
+            "strength_category": "Moderate",
+            "strength_factors": {
+              "base_strength": 0.2,
+              "lord_strength": 0.7,
+              "occupant_strength": 0.6,
+              "aspect_strength": 0.4,
+              "rasi_strength": 0.7
+            },
+            "weights_used": {
+              "base_strength": 0.2,
+              "lord_strength": 0.3,
+              "occupant_strength": 0.25,
+              "aspect_strength": 0.15,
+              "rasi_strength": 0.1
+            },
+            "bhava_nature": "Dusthana",
+            "contributing_factors": [
+              "Weak base_strength",
+              "Strong lord_strength",
+              "Strong rasi_strength"
+            ]
+          },
+          "yogas": {
+            "kendra_trikona_yoga": [],
+            "exchange_yoga": [],
+            "conjunction_yoga": [],
+            "aspect_yoga": [],
+            "special_yoga": []
+          },
+          "aspects_received": {
+            "Ketu": {
+              "is_aspecting": true,
+              "graha": "Ketu",
+              "target_longitude": 45.630486544212886,
+              "angular_distance": 123.74593144021253,
+              "strongest_aspect": {
+                "angle": 120,
+                "orb_category": "wide",
+                "strength": 0.5,
+                "exact_orb": 3.74593144021253
+              },
+              "all_aspects": [
+                {
+                  "angle": 120,
+                  "orb_category": "wide",
+                  "strength": 0.5,
+                  "exact_orb": 3.74593144021253
+                }
+              ],
+              "total_strength": 0.5
+            }
+          },
+          "significations": [
+            "Losses",
+            "Expenses",
+            "Foreign lands",
+            "Spirituality",
+            "Liberation",
+            "Hospitals",
+            "Prisons",
+            "Sleep",
+            "Feet",
+            "Left eye",
+            "Charity",
+            "Donations",
+            "Meditation",
+            "Isolation",
+            "Secret enemies",
+            "Bed comforts",
+            "Dreams"
+          ]
+        }
+      },
+      "graha_placements": {
+        "1": [
+          "Rahu"
+        ],
+        "2": [],
+        "3": [
+          "Jupiter"
+        ],
+        "4": [
+          "Mars"
+        ],
+        "5": [],
+        "6": [],
+        "7": [
+          "Ketu"
+        ],
+        "8": [
+          "Saturn"
+        ],
+        "9": [],
+        "10": [
+          "Sun",
+          "Mercury",
+          "Venus"
+        ],
+        "11": [],
+        "12": [
+          "Moon"
+        ]
+      },
+      "bhava_lords": {
+        "1": "Mercury",
+        "2": "Moon",
+        "3": "Sun",
+        "4": "Mercury",
+        "5": "Venus",
+        "6": "Mars",
+        "7": "Jupiter",
+        "8": "Saturn",
+        "9": "Saturn",
+        "10": "Jupiter",
+        "11": "Mars",
+        "12": "Venus"
+      },
+      "strongest_bhavas": [
+        [
+          3,
+          0.615
+        ],
+        [
+          1,
+          0.6075000000000002
+        ],
+        [
+          4,
+          0.5825
+        ]
+      ],
+      "weakest_bhavas": [
+        [
+          2,
+          0.375
+        ],
+        [
+          11,
+          0.5049999999999999
+        ],
+        [
+          6,
+          0.5199999999999999
+        ]
+      ]
+    },
+    "special_points": {
+      "midheaven": {
+        "longitude": 345.6304865442129,
+        "rasi": "Pisces"
+      },
+      "part_of_fortune": {
+        "longitude": 155.33048654421287,
+        "rasi": "Virgo"
+      }
+    }
+  },
+  "summary": {
+    "birth_details": {
+      "datetime": "1990-05-15T14:30:00",
+      "location": "Lat: 28.6139, Lon: 77.209",
+      "timezone": "Asia/Kolkata"
+    },
+    "ascendant": {
+      "rasi": "Gemini",
+      "degrees": "15.63\u00b0",
+      "nakshatra": "Ardra pada 3"
+    },
+    "strongest_grahas": [
+      "Saturn (Own Sign)"
+    ],
+    "strongest_bhavas": [
+      [
+        3,
+        0.615
+      ],
+      [
+        1,
+        0.6075000000000002
+      ],
+      [
+        4,
+        0.5825
+      ]
+    ],
+    "total_aspects": 15,
+    "conjunctions": 0,
+    "chart_strength": "Moderate"
+  },
+  "yogas": {
+    "raj_yogas": [
+      {
+        "type": "Lord in Kendra-Trikona",
+        "lord": "Mercury",
+        "from_bhava": 1,
+        "to_bhava": 10
+      },
+      {
+        "type": "Lord in Kendra-Trikona",
+        "lord": "Venus",
+        "from_bhava": 5,
+        "to_bhava": 10
+      }
+    ],
+    "dhana_yogas": [
+      {
+        "type": "Dhana Yoga potential",
+        "lords": [
+          "Moon",
+          "Mars"
+        ]
+      }
+    ],
+    "spiritual_yogas": [],
+    "challenging_yogas": []
+  }
+}
