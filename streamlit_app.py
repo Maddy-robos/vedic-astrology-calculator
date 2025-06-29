@@ -742,7 +742,8 @@ if st.session_state.chart:
                 st.markdown(f"### {name}")
                 house_num = planet_houses.get(name, 'N/A')
                 st.markdown(f"**Sign:** {data['rasi']} | **House:** {house_num}")
-                st.markdown(f"**Longitude:** {data['longitude']:.2f}° | **Nakshatra:** {data['nakshatra']}")
+                degrees_in_sign = data['longitude'] % 30
+                st.markdown(f"**Longitude:** {degrees_in_sign:.2f}° | **Nakshatra:** {data['nakshatra']}")
                 
                 # Get dignity for the planet
                 graha = Graha(name, data['longitude'])
@@ -760,7 +761,8 @@ if st.session_state.chart:
                 st.markdown(f"### {name}")
                 house_num = planet_houses.get(name, 'N/A')
                 st.markdown(f"**Sign:** {data['rasi']} | **House:** {house_num}")
-                st.markdown(f"**Longitude:** {data['longitude']:.2f}° | **Nakshatra:** {data['nakshatra']}")
+                degrees_in_sign = data['longitude'] % 30
+                st.markdown(f"**Longitude:** {degrees_in_sign:.2f}° | **Nakshatra:** {data['nakshatra']}")
                 
                 # Get dignity for the planet
                 graha = Graha(name, data['longitude'])
