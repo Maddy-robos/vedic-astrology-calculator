@@ -17,7 +17,6 @@ from chart import Chart
 from calculations_helper import CalculationsHelper
 from chart_visualization import NorthIndianChart
 from jhd_converter import JHDConverter
-from file_handler import FileHandler
 
 def format_planetary_data(grahas, house_planets):
     """
@@ -295,9 +294,8 @@ with tab2:
         - Custom JHD files following the standard format
         """)
     
-    # Initialize JHD converter and file handler
+    # Initialize JHD converter
     jhd_converter = JHDConverter()
-    file_handler = FileHandler()
     
     # Process uploaded JHD files
     if uploaded_jhd_files:
