@@ -355,6 +355,59 @@ class CalculationsHelper:
         return house_planets
     
     @staticmethod
+    def get_rasi_based_house_placements(ascendant_rasi: str, 
+                                      graha_positions: Dict[str, Dict]) -> Dict[int, List[str]]:
+        """
+        Calculate house placements based on rasi positions (traditional Vedic method)
+        
+        In Vedic astrology, planets are placed in houses based on their rasi (sign),
+        not their degree-based bhava positions. The houses represent fixed positions
+        on the chart, and the signs rotate based on the ascendant.
+        
+        Args:
+            ascendant_rasi: The ascendant sign name (e.g., 'Scorpio')
+            graha_positions: Dictionary of graha positions with 'rasi' field
+            
+        Returns:
+            Dictionary mapping house numbers (1-12) to list of planets in that house
+            
+        Example:
+            If Lagna = Scorpio and Jupiter = Sagittarius:
+            - House 1 = Scorpio
+            - House 2 = Sagittarius (so Jupiter goes in House 2)
+            - House 3 = Capricorn, etc.
+        """
+        # Get ascendant sign index
+        if ascendant_rasi not in CalculationsHelper.RASIS:
+            raise ValueError(f"Invalid ascendant rasi: {ascendant_rasi}")
+        
+        asc_index = CalculationsHelper.RASIS.index(ascendant_rasi)
+        
+        # Initialize house placements
+        house_planets = {i: [] for i in range(1, 13)}
+        
+        # Calculate rasi-based house placements for each planet
+        for graha_name, graha_data in graha_positions.items():
+            if 'rasi' not in graha_data:
+                continue
+                
+            graha_rasi = graha_data['rasi']
+            if graha_rasi not in CalculationsHelper.RASIS:
+                continue
+                
+            # Get planet's rasi index
+            graha_rasi_index = CalculationsHelper.RASIS.index(graha_rasi)
+            
+            # Calculate house number based on rasi relationship to ascendant
+            # House number = (planet_rasi_index - ascendant_rasi_index) + 1
+            # Use modulo 12 to handle wrap-around
+            house_num = ((graha_rasi_index - asc_index) % 12) + 1
+            
+            house_planets[house_num].append(graha_name)
+        
+        return house_planets
+    
+    @staticmethod
     def calculate_bhava_madhya(ascendant: float, bhava_number: int, 
                               house_system: str = 'Placidus') -> float:
         """

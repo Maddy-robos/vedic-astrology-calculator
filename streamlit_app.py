@@ -750,18 +750,15 @@ if st.session_state.chart:
         grahas = chart.get_graha_positions()
         
         if "D1" in chart_type:
-            # D1 Chart - Display North Indian chart
+            # D1 Chart - Display North Indian chart using rasi-based placement
             summary = chart.get_chart_summary()
             lagna_sign = summary['ascendant']['rasi']
             
-            # Get house placements
-            bhava_analysis = chart.get_bhava_analysis()
-            graha_placements = bhava_analysis.get('graha_placements', {})
-            
-            # Convert to house_planets format
-            house_planets = {}
-            for house_str, planets in graha_placements.items():
-                house_planets[int(house_str)] = planets
+            # Use rasi-based placement (traditional Vedic method)
+            # Planets are placed based on their rasi, not degree-based bhava positions
+            house_planets = CalculationsHelper.get_rasi_based_house_placements(
+                lagna_sign, grahas
+            )
             
             # Chart title
             chart_title = "Birth Chart (Rasi - D1)"
@@ -806,7 +803,8 @@ if st.session_state.chart:
         svg_string = ni_chart.generate_chart(
             lagna_sign=lagna_sign,
             house_planets=house_planets,
-            chart_title=chart_title
+            chart_title=chart_title,
+            graha_positions=grahas
         )
         
         # Center the chart
@@ -989,21 +987,13 @@ if st.session_state.chart:
     with tab3:
         st.markdown("## Bhava Aspects (Drishti to Houses)")
         
-        # Create aspect analyzer
+        # Create aspect analyzer (always rasi-based)
         aspect_analyzer = AspectAnalysis(chart.chart_data, aspect_mode='rasi')
         
-        # Option to select aspect mode
+        # Display mode info and house selection
         col1, col2 = st.columns([2, 1])
         with col1:
-            aspect_mode = st.selectbox(
-                "Aspect Calculation Mode",
-                options=["rasi", "degree"],
-                format_func=lambda x: "Traditional Rasi-based" if x == "rasi" else "Degree-based with Orbs",
-                help="Choose how aspects are calculated"
-            )
-        
-        if aspect_mode != aspect_analyzer.aspect_mode:
-            aspect_analyzer = AspectAnalysis(chart.chart_data, aspect_mode=aspect_mode)
+            st.info("🎯 **Traditional Rasi-based Aspects**: Planets aspect complete signs (rasis), counting forward for normal planets and backward for retrograde planets.")
         
         # House selection
         with col2:

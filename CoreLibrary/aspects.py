@@ -113,6 +113,10 @@ class Aspects:
         """
         Get aspect angles adjusted for retrograde motion
         
+        When planets are retrograde, their aspects go in reverse direction:
+        - Normal aspects go forward (clockwise)
+        - Retrograde aspects go backward (counter-clockwise)
+        
         Args:
             graha_name: Name of graha
             
@@ -132,18 +136,18 @@ class Aspects:
             
         adjusted_aspects = []
         for aspect in base_aspects:
-            if aspect == 180:  # 7th aspect never changes
+            if aspect == 180:  # 7th aspect never changes (opposite always remains opposite)
                 adjusted_aspects.append(aspect)
             elif graha_name == 'Mars':
-                # Mars retrograde: 4th->10th (90->270), 8th->6th (210->150)
+                # Mars retrograde: 4th->10th, 8th->6th (7th unchanged)
                 if aspect == 90:    # 4th becomes 10th
                     adjusted_aspects.append(270)
                 elif aspect == 210: # 8th becomes 6th
                     adjusted_aspects.append(150)
             elif graha_name == 'Saturn':
-                # Saturn retrograde: 3rd->11th (60->300), 10th->4th (270->90)
+                # Saturn retrograde: 3rd->11th, 10th->4th (7th unchanged)
                 if aspect == 60:    # 3rd becomes 11th
-                    adjusted_aspects.append(300)
+                    adjusted_aspects.append(300)  # 11th aspect = 300°, not 330°
                 elif aspect == 270: # 10th becomes 4th
                     adjusted_aspects.append(90)
                     

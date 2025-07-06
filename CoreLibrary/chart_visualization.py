@@ -276,7 +276,7 @@ class NorthIndianChart:
             })
             sign_text.text = str(sign_num)
     
-    def _add_planets(self, svg: ET.Element, house_planets: Dict[int, List[str]]):
+    def _add_planets(self, svg: ET.Element, house_planets: Dict[int, List[str]], graha_positions: Dict[str, Dict] = None):
         """Add planets to their respective houses with proper layout."""
         # Planet abbreviations
         planet_abbr = {
@@ -290,8 +290,18 @@ class NorthIndianChart:
                 center_x, center_y = self.house_centers[house_num]
                 area_info = self.house_areas[house_num]
                 
-                # Get abbreviated planet names
-                abbrev_planets = [planet_abbr.get(p, p[:2]) for p in planets]
+                # Get abbreviated planet names with retrograde formatting
+                abbrev_planets = []
+                for planet in planets:
+                    abbrev = planet_abbr.get(planet, planet[:2])
+                    
+                    # Check if planet is retrograde and add brackets
+                    if graha_positions and planet in graha_positions:
+                        is_retrograde = graha_positions[planet].get('is_retrograde', False)
+                        if is_retrograde:
+                            abbrev = f"({abbrev})"
+                    
+                    abbrev_planets.append(abbrev)
                 
                 # Calculate layout for multiple planets
                 max_cols = area_info['max_cols']
@@ -350,13 +360,20 @@ class NorthIndianChart:
     def generate_chart(self, 
                       lagna_sign: str,
                       house_planets: Dict[int, List[str]],
-                      chart_title: Optional[str] = None) -> str:
+                      chart_title: Optional[str] = None,
+                      graha_positions: Dict[str, Dict] = None) -> str:
         """
         Generate the complete North Indian chart as SVG string.
+        
+        IMPORTANT: For accurate Vedic charts, use rasi-based planet placement:
+        - Use CalculationsHelper.get_rasi_based_house_placements() for D1 charts
+        - Use CalculationsHelper.get_divisional_house_placements() for divisional charts
+        - This ensures planets are placed by rasi (sign), not bhava (degree-based houses)
         
         Args:
             lagna_sign: The ascendant sign name
             house_planets: Dictionary mapping house numbers to list of planets
+                          (Should be generated using rasi-based methods above)
             chart_title: Optional title for the chart
             
         Returns:
@@ -388,7 +405,7 @@ class NorthIndianChart:
         self._add_sign_numbers(svg, lagna_sign)
         
         # Add planets
-        self._add_planets(svg, house_planets)
+        self._add_planets(svg, house_planets, graha_positions)
         
         # Convert to string
         return ET.tostring(svg, encoding='unicode', method='xml')
@@ -397,7 +414,8 @@ class NorthIndianChart:
                    filename: str,
                    lagna_sign: str,
                    house_planets: Dict[int, List[str]],
-                   chart_title: Optional[str] = None):
+                   chart_title: Optional[str] = None,
+                   graha_positions: Dict[str, Dict] = None):
         """
         Save the chart to an SVG file.
         
@@ -407,7 +425,7 @@ class NorthIndianChart:
             house_planets: Dictionary mapping house numbers to list of planets
             chart_title: Optional title for the chart
         """
-        svg_string = self.generate_chart(lagna_sign, house_planets, chart_title)
+        svg_string = self.generate_chart(lagna_sign, house_planets, chart_title, graha_positions)
         
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(svg_string)

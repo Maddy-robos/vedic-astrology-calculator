@@ -307,18 +307,15 @@ with tab2:
                             grahas = chart_info['chart'].get_graha_positions()
                             
                             if "D1" in chart_type:
-                                # D1 Chart - Display North Indian chart
+                                # D1 Chart - Display North Indian chart using rasi-based placement
                                 summary = chart_info['chart_data']
                                 lagna_sign = summary['ascendant']['rasi']
                                 
-                                # Get house placements
-                                bhava_analysis = chart_info['chart'].get_bhava_analysis()
-                                graha_placements = bhava_analysis.get('graha_placements', {})
-                                
-                                # Convert to house_planets format
-                                house_planets = {}
-                                for house_str, planets in graha_placements.items():
-                                    house_planets[int(house_str)] = planets
+                                # Use rasi-based placement (traditional Vedic method)
+                                # Planets are placed based on their rasi, not degree-based bhava positions
+                                house_planets = CalculationsHelper.get_rasi_based_house_placements(
+                                    lagna_sign, grahas
+                                )
                                 
                                 # Display info
                                 info_text = f"**Lagna**: {lagna_sign} {summary['ascendant']['degrees']}"
@@ -361,7 +358,8 @@ with tab2:
                             svg_string = ni_chart.generate_chart(
                                 lagna_sign=lagna_sign,
                                 house_planets=house_planets,
-                                chart_title=None  # No title for compact display
+                                chart_title=None,  # No title for compact display
+                                graha_positions=grahas
                             )
                             
                             # Display SVG chart
@@ -411,11 +409,10 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
         if "D1" in chart_type:
             summary = selected_chart['chart_data']
             lagna_sign = summary['ascendant']['rasi']
-            bhava_analysis = selected_chart['chart'].get_bhava_analysis()
-            graha_placements = bhava_analysis.get('graha_placements', {})
-            house_planets = {}
-            for house_str, planets in graha_placements.items():
-                house_planets[int(house_str)] = planets
+            # Use rasi-based placement for D1 detailed view
+            house_planets = CalculationsHelper.get_rasi_based_house_placements(
+                lagna_sign, grahas
+            )
         else:
             # Divisional charts
             if "D2" in chart_type:
@@ -440,7 +437,8 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
         svg_string = ni_chart.generate_chart(
             lagna_sign=lagna_sign,
             house_planets=house_planets,
-            chart_title=None
+            chart_title=None,
+            graha_positions=grahas
         )
         st.markdown(svg_string, unsafe_allow_html=True)
     

@@ -39,6 +39,7 @@ class AspectAnalysis:
         210: '8th Aspect',
         240: '9th Aspect',
         270: '10th Aspect',
+        300: '11th Aspect',
         330: '12th Aspect'
     }
     
@@ -71,7 +72,11 @@ class AspectAnalysis:
         """Create Aspects calculator from graha data"""
         graha_objects = {}
         for name, data in self.grahas.items():
-            graha_objects[name] = Graha(name, data['longitude'])
+            graha = Graha(name, data['longitude'])
+            # Set retrograde status if available
+            if 'is_retrograde' in data:
+                graha.is_retrograde = data['is_retrograde']
+            graha_objects[name] = graha
         return Aspects(graha_objects)
     
     def get_bhava_aspects_analysis(self, bhava_number: int) -> Dict:
@@ -146,6 +151,7 @@ class AspectAnalysis:
             houses_away = int(aspect_angle / 30)
             
             # Calculate which rasi is aspected
+            # Always count forward since retrograde adjustment is already done in aspect angles
             aspected_rasi_num = (graha_rasi_num + houses_away) % 12
             
             # Check if target rasi is the aspected rasi
@@ -190,9 +196,9 @@ class AspectAnalysis:
         return aspects
     
     def _get_graha_aspects(self, graha_name: str, graha_rasi: str) -> List[int]:
-        """Get aspects for a graha, handling special cases for Rahu/Ketu"""
-        # Get base aspects
-        base_aspects = Aspects.GRAHA_SPECIAL_ASPECTS.get(graha_name, [180]).copy()
+        """Get aspects for a graha, handling special cases for Rahu/Ketu and retrograde motion"""
+        # Get retrograde-adjusted aspects (this handles normal cases too)
+        base_aspects = self.aspects_calc.get_retrograde_adjusted_aspects(graha_name).copy()
         
         # Handle Rahu/Ketu special aspects based on odd/even rasi
         if graha_name in ['Rahu', 'Ketu']:
