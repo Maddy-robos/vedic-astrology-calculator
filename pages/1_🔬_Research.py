@@ -408,6 +408,10 @@ with tab2:
                             # Parse JHD file
                             birth_data = jhd_converter._parse_jhd_file(temp_jhd.name)
                             
+                            # Override the name with original filename (removing .jhd extension)
+                            original_name = os.path.splitext(jhd_data['filename'])[0]
+                            birth_data['name'] = original_name
+                            
                             # Create chart
                             # Format timezone properly (e.g., UTC+08:00 instead of UTC+8.0)
                             tz_offset = birth_data['timezone_offset']
@@ -433,7 +437,8 @@ with tab2:
                                 'place': birth_data['place_name'],
                                 'chart_data': chart.get_chart_summary(),
                                 'source': jhd_data['source'],
-                                'data_format': 'JHD'
+                                'data_format': 'JHD',
+                                'original_filename': jhd_data['filename']
                             }
                             processed_charts.append(chart_data)
                             
@@ -516,7 +521,11 @@ with tab3:
                         # Chart container
                         with st.container():
                             st.markdown(f"### {chart_info['name']}")
-                            st.caption(f"{chart_info['birth_datetime'].strftime('%Y-%m-%d %H:%M')} | {chart_info['place']}")
+                            # Add source information for JHD files
+                            if chart_info.get('data_format') == 'JHD':
+                                st.caption(f"{chart_info['birth_datetime'].strftime('%Y-%m-%d %H:%M')} | {chart_info['place']} | 📄 {chart_info.get('original_filename', 'JHD file')}")
+                            else:
+                                st.caption(f"{chart_info['birth_datetime'].strftime('%Y-%m-%d %H:%M')} | {chart_info['place']}")
                             
                             # Get chart data based on selection
                             ascendant = chart_info['chart'].get_ascendant()
@@ -586,9 +595,10 @@ with tab3:
                             st.markdown(info_text)
                             
                             # Add View Details button
-                            if st.button(f"🔍 View Details", key=f"details_{i}_{j}"):
+                            chart_absolute_index = start_idx + i + j
+                            if st.button(f"🔍 View Details", key=f"details_{chart_absolute_index}"):
                                 st.session_state.show_chart_details = True
-                                st.session_state.selected_chart_index = start_idx + i + j
+                                st.session_state.selected_chart_index = chart_absolute_index
                                 st.rerun()
                             
                             st.divider()
@@ -604,7 +614,16 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
     col1, col2, col3 = st.columns([2, 1, 1])
     with col1:
         st.markdown(f"### {selected_chart['name']}")
-        st.caption(f"📅 {selected_chart['birth_datetime'].strftime('%B %d, %Y at %H:%M')} | 📍 {selected_chart['place']}")
+        # Enhanced caption with source information
+        caption_parts = [f"📅 {selected_chart['birth_datetime'].strftime('%B %d, %Y at %H:%M')}", f"📍 {selected_chart['place']}"]
+        
+        if selected_chart.get('data_format') == 'JHD':
+            caption_parts.append(f"📄 Source: {selected_chart.get('original_filename', 'JHD file')}")
+            caption_parts.append(f"🔗 From: {selected_chart.get('source', 'Unknown')}")
+        elif selected_chart.get('data_format') == 'CSV':
+            caption_parts.append("📊 Source: CSV upload")
+        
+        st.caption(" | ".join(caption_parts))
     
     with col3:
         if st.button("❌ Close Details"):
