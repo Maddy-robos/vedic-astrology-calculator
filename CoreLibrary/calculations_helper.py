@@ -169,6 +169,192 @@ class CalculationsHelper:
         return CalculationsHelper.RASIS[navamsa_rasi_index]
     
     @staticmethod
+    def get_navamsa_house_placements(d1_ascendant: float, 
+                                   graha_positions: Dict[str, Dict]) -> Dict[int, List[str]]:
+        """
+        Calculate house placements for D9 Navamsa chart
+        
+        Args:
+            d1_ascendant: D1 ascendant longitude in degrees
+            graha_positions: Dictionary of graha positions from D1 chart
+            
+        Returns:
+            Dictionary mapping house numbers to list of planets in that house
+        """
+        # Get D9 ascendant
+        d9_asc_sign = CalculationsHelper.get_navamsa_rasi(d1_ascendant)
+        d9_asc_index = CalculationsHelper.RASIS.index(d9_asc_sign)
+        
+        # Initialize house placements
+        house_planets = {i: [] for i in range(1, 13)}
+        
+        # Calculate D9 positions for each planet
+        for graha, data in graha_positions.items():
+            if 'longitude' in data:
+                # Get D9 sign for this planet
+                d9_sign = CalculationsHelper.get_navamsa_rasi(data['longitude'])
+                d9_sign_index = CalculationsHelper.RASIS.index(d9_sign)
+                
+                # Calculate house number (1-12)
+                # House = (planet sign - ascendant sign) + 1
+                house_num = ((d9_sign_index - d9_asc_index) % 12) + 1
+                
+                house_planets[house_num].append(graha)
+        
+        return house_planets
+    
+    @staticmethod
+    def get_hora_rasi(longitude: float) -> str:
+        """
+        Calculate Hora (D2) rasi from longitude
+        
+        Args:
+            longitude: Longitude in degrees (0-360)
+            
+        Returns:
+            Hora rasi name (Leo or Cancer)
+        """
+        longitude = CalculationsHelper.normalize_degrees(longitude)
+        
+        # Get the rasi (0-11)
+        rasi_index = int(longitude / 30)
+        
+        # Degrees within rasi
+        degrees_in_rasi = longitude % 30
+        
+        # Each hora is 15 degrees
+        hora_index = int(degrees_in_rasi / 15)  # 0 or 1
+        
+        # Odd signs: first hora = Sun (Leo), second hora = Moon (Cancer)
+        # Even signs: first hora = Moon (Cancer), second hora = Sun (Leo)
+        if rasi_index % 2 == 0:  # Even rasi (Aries=0, Gemini=2, etc.)
+            return 'Leo' if hora_index == 0 else 'Cancer'
+        else:  # Odd rasi (Taurus=1, Cancer=3, etc.)
+            return 'Cancer' if hora_index == 0 else 'Leo'
+    
+    @staticmethod
+    def get_drekkana_rasi(longitude: float) -> str:
+        """
+        Calculate Drekkana (D3) rasi from longitude
+        
+        Args:
+            longitude: Longitude in degrees (0-360)
+            
+        Returns:
+            Drekkana rasi name
+        """
+        longitude = CalculationsHelper.normalize_degrees(longitude)
+        
+        # Get the rasi (0-11)
+        rasi_index = int(longitude / 30)
+        
+        # Degrees within rasi
+        degrees_in_rasi = longitude % 30
+        
+        # Each drekkana is 10 degrees
+        drekkana_index = int(degrees_in_rasi / 10)  # 0, 1, or 2
+        
+        # Drekkana calculation:
+        # 1st drekkana = same sign
+        # 2nd drekkana = 5th sign from current
+        # 3rd drekkana = 9th sign from current
+        if drekkana_index == 0:
+            result_rasi = rasi_index
+        elif drekkana_index == 1:
+            result_rasi = (rasi_index + 4) % 12  # 5th sign (index + 4)
+        else:  # drekkana_index == 2
+            result_rasi = (rasi_index + 8) % 12  # 9th sign (index + 8)
+        
+        return CalculationsHelper.RASIS[result_rasi]
+    
+    @staticmethod
+    def get_dasamsa_rasi(longitude: float) -> str:
+        """
+        Calculate Dasamsa (D10) rasi from longitude
+        
+        Args:
+            longitude: Longitude in degrees (0-360)
+            
+        Returns:
+            Dasamsa rasi name
+        """
+        longitude = CalculationsHelper.normalize_degrees(longitude)
+        
+        # Get the rasi (0-11)
+        rasi_index = int(longitude / 30)
+        
+        # Degrees within rasi
+        degrees_in_rasi = longitude % 30
+        
+        # Each dasamsa is 3 degrees
+        dasamsa_index = int(degrees_in_rasi / 3)  # 0-9
+        
+        # Dasamsa calculation based on odd/even signs
+        if rasi_index % 2 == 0:  # Odd signs (Aries, Gemini, Leo, etc.)
+            # Start from same sign
+            result_rasi = (rasi_index + dasamsa_index) % 12
+        else:  # Even signs (Taurus, Cancer, Virgo, etc.)
+            # Start from 9th sign
+            start_rasi = (rasi_index + 8) % 12  # 9th from current
+            result_rasi = (start_rasi + dasamsa_index) % 12
+        
+        return CalculationsHelper.RASIS[result_rasi]
+    
+    @staticmethod
+    def get_divisional_house_placements(divisional_type: str,
+                                      d1_ascendant: float, 
+                                      graha_positions: Dict[str, Dict]) -> Dict[int, List[str]]:
+        """
+        Calculate house placements for any divisional chart
+        
+        Args:
+            divisional_type: Type of divisional chart ('D2', 'D3', 'D9', 'D10')
+            d1_ascendant: D1 ascendant longitude in degrees
+            graha_positions: Dictionary of graha positions from D1 chart
+            
+        Returns:
+            Dictionary mapping house numbers to list of planets in that house
+        """
+        # Get divisional ascendant
+        if divisional_type == 'D2':
+            div_asc_sign = CalculationsHelper.get_hora_rasi(d1_ascendant)
+        elif divisional_type == 'D3':
+            div_asc_sign = CalculationsHelper.get_drekkana_rasi(d1_ascendant)
+        elif divisional_type == 'D9':
+            div_asc_sign = CalculationsHelper.get_navamsa_rasi(d1_ascendant)
+        elif divisional_type == 'D10':
+            div_asc_sign = CalculationsHelper.get_dasamsa_rasi(d1_ascendant)
+        else:
+            raise ValueError(f"Unsupported divisional type: {divisional_type}")
+        
+        div_asc_index = CalculationsHelper.RASIS.index(div_asc_sign)
+        
+        # Initialize house placements
+        house_planets = {i: [] for i in range(1, 13)}
+        
+        # Calculate divisional positions for each planet
+        for graha, data in graha_positions.items():
+            if 'longitude' in data:
+                # Get divisional sign for this planet
+                if divisional_type == 'D2':
+                    div_sign = CalculationsHelper.get_hora_rasi(data['longitude'])
+                elif divisional_type == 'D3':
+                    div_sign = CalculationsHelper.get_drekkana_rasi(data['longitude'])
+                elif divisional_type == 'D9':
+                    div_sign = CalculationsHelper.get_navamsa_rasi(data['longitude'])
+                elif divisional_type == 'D10':
+                    div_sign = CalculationsHelper.get_dasamsa_rasi(data['longitude'])
+                
+                div_sign_index = CalculationsHelper.RASIS.index(div_sign)
+                
+                # Calculate house number (1-12)
+                house_num = ((div_sign_index - div_asc_index) % 12) + 1
+                
+                house_planets[house_num].append(graha)
+        
+        return house_planets
+    
+    @staticmethod
     def calculate_bhava_madhya(ascendant: float, bhava_number: int, 
                               house_system: str = 'Placidus') -> float:
         """

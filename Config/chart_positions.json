@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "description": "North Indian Chart House Positions Configuration",
+  "chart_size": {
+    "width": 400,
+    "height": 400
+  },
+  "house_centers": {
+    "1": {
+      "x": 1.0,
+      "y": 0.5,
+      "type": "square"
+    },
+    "2": {
+      "x": 0.35,
+      "y": 0.15,
+      "type": "triangle"
+    },
+    "3": {
+      "x": 0.15,
+      "y": 0.5,
+      "type": "triangle"
+    },
+    "4": {
+      "x": 0.45,
+      "y": 1.0,
+      "type": "square"
+    },
+    "5": {
+      "x": 0.15,
+      "y": 1.5,
+      "type": "triangle"
+    },
+    "6": {
+      "x": 0.5,
+      "y": 1.8,
+      "type": "triangle"
+    },
+    "7": {
+      "x": 1.0,
+      "y": 1.45,
+      "type": "square"
+    },
+    "8": {
+      "x": 1.55,
+      "y": 1.75,
+      "type": "triangle"
+    },
+    "9": {
+      "x": 1.85,
+      "y": 1.45,
+      "type": "triangle"
+    },
+    "10": {
+      "x": 1.5,
+      "y": 1.0,
+      "type": "square"
+    },
+    "11": {
+      "x": 1.85,
+      "y": 0.5,
+      "type": "triangle"
+    },
+    "12": {
+      "x": 1.5,
+      "y": 0.25,
+      "type": "triangle"
+    }
+  },
+  "house_areas": {
+    "1": {
+      "width": 0.6,
+      "height": 0.4,
+      "max_cols": 3,
+      "max_rows": 3
+    },
+    "2": {
+      "width": 0.3,
+      "height": 0.3,
+      "max_cols": 2,
+      "max_rows": 2
+    },
+    "3": {
+      "width": 0.25,
+      "height": 0.4,
+      "max_cols": 2,
+      "max_rows": 3
+    },
+    "4": {
+      "width": 0.4,
+      "height": 0.6,
+      "max_cols": 2,
+      "max_rows": 4
+    },
+    "5": {
+      "width": 0.25,
+      "height": 0.4,
+      "max_cols": 2,
+      "max_rows": 3
+    },
+    "6": {
+      "width": 0.3,
+      "height": 0.3,
+      "max_cols": 2,
+      "max_rows": 2
+    },
+    "7": {
+      "width": 0.6,
+      "height": 0.4,
+      "max_cols": 3,
+      "max_rows": 3
+    },
+    "8": {
+      "width": 0.3,
+      "height": 0.3,
+      "max_cols": 2,
+      "max_rows": 2
+    },
+    "9": {
+      "width": 0.25,
+      "height": 0.4,
+      "max_cols": 2,
+      "max_rows": 3
+    },
+    "10": {
+      "width": 0.4,
+      "height": 0.6,
+      "max_cols": 2,
+      "max_rows": 4
+    },
+    "11": {
+      "width": 0.25,
+      "height": 0.4,
+      "max_cols": 2,
+      "max_rows": 3
+    },
+    "12": {
+      "width": 0.3,
+      "height": 0.3,
+      "max_cols": 2,
+      "max_rows": 2
+    }
+  },
+  "last_modified": "2025-07-06T21:15:05.340694",
+  "notes": "Positions are stored as ratios of chart center (0.5, 0.5 = center). Use Chart Editor to modify."
+}

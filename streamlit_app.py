@@ -17,6 +17,7 @@ from chart import Chart
 from calculations_helper import CalculationsHelper
 from graha import Graha
 from aspect_analysis import AspectAnalysis
+from chart_visualization import NorthIndianChart
 
 # Set page config
 st.set_page_config(
@@ -714,10 +715,129 @@ if st.session_state.chart:
     st.markdown("</div>", unsafe_allow_html=True)
     
     # Tabs for different views
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["🪐 Planets", "🏠 Houses", "👁️ Bhava Aspects", "☌ Conjunctions", "🎯 Yogas", "💾 Export"])
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["📊 Chart", "🪐 Planets", "🏠 Houses", "👁️ Bhava Aspects", "☌ Conjunctions", "🎯 Yogas", "💾 Export"])
     
     with tab1:
-        st.markdown("## Planetary Positions")
+        st.markdown("## Birth Chart Visualization")
+        
+        # Chart type selector
+        col1, col2 = st.columns([2, 1])
+        with col1:
+            chart_type = st.selectbox(
+                "Select Chart Type",
+                options=[
+                    "D1 - Rasi Chart", 
+                    "D2 - Hora Chart", 
+                    "D3 - Drekkana Chart",
+                    "D9 - Navamsa Chart",
+                    "D10 - Dasamsa Chart"
+                ],
+                help="Choose which divisional chart to display"
+            )
+        with col2:
+            chart_size = st.slider(
+                "Chart Size",
+                min_value=400,
+                max_value=700,
+                value=600,
+                step=50,
+                help="Adjust chart size"
+            )
+        
+        # Get chart data
+        ascendant = chart.get_ascendant()
+        ascendant_deg = ascendant['longitude']
+        grahas = chart.get_graha_positions()
+        
+        if "D1" in chart_type:
+            # D1 Chart - Display North Indian chart
+            summary = chart.get_chart_summary()
+            lagna_sign = summary['ascendant']['rasi']
+            
+            # Get house placements
+            bhava_analysis = chart.get_bhava_analysis()
+            graha_placements = bhava_analysis.get('graha_placements', {})
+            
+            # Convert to house_planets format
+            house_planets = {}
+            for house_str, planets in graha_placements.items():
+                house_planets[int(house_str)] = planets
+            
+            # Chart title
+            chart_title = "Birth Chart (Rasi - D1)"
+            info_text = f"**Lagna**: {lagna_sign}"
+            
+        else:
+            # Divisional charts (D2, D3, D9, D10)
+            if "D2" in chart_type:
+                div_type = "D2"
+                div_name = "Hora"
+            elif "D3" in chart_type:
+                div_type = "D3"
+                div_name = "Drekkana"
+            elif "D9" in chart_type:
+                div_type = "D9"
+                div_name = "Navamsa"
+            elif "D10" in chart_type:
+                div_type = "D10"
+                div_name = "Dasamsa"
+            
+            # Get divisional house placements using unified method
+            house_planets = CalculationsHelper.get_divisional_house_placements(
+                div_type, ascendant_deg, grahas
+            )
+            
+            # Get divisional ascendant
+            if div_type == "D2":
+                lagna_sign = CalculationsHelper.get_hora_rasi(ascendant_deg)
+            elif div_type == "D3":
+                lagna_sign = CalculationsHelper.get_drekkana_rasi(ascendant_deg)
+            elif div_type == "D9":
+                lagna_sign = CalculationsHelper.get_navamsa_rasi(ascendant_deg)
+            elif div_type == "D10":
+                lagna_sign = CalculationsHelper.get_dasamsa_rasi(ascendant_deg)
+            
+            # Chart title and info
+            chart_title = f"{div_name} Chart ({div_type})"
+            info_text = f"**{div_name} Lagna**: {lagna_sign}"
+        
+        # Create and display North Indian chart
+        ni_chart = NorthIndianChart(width=chart_size, height=chart_size)
+        svg_string = ni_chart.generate_chart(
+            lagna_sign=lagna_sign,
+            house_planets=house_planets,
+            chart_title=chart_title
+        )
+        
+        # Center the chart
+        col1, col2, col3 = st.columns([1, 3, 1])
+        with col2:
+            st.markdown(svg_string, unsafe_allow_html=True)
+        
+        # Show chart summary below
+        st.markdown("### Chart Summary")
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.markdown(info_text)
+        with col2:
+            if "D1" in chart_type:
+                moon_sign = grahas.get('Moon', {}).get('rasi', 'Unknown')
+                st.markdown(f"**Moon Sign:** {moon_sign}")
+            else:
+                total_planets = sum(len(planets) for planets in house_planets.values())
+                st.markdown(f"**Planets Placed:** {total_planets}")
+        with col3:
+            if "D1" in chart_type:
+                sun_sign = grahas.get('Sun', {}).get('rasi', 'Unknown')
+                st.markdown(f"**Sun Sign:** {sun_sign}")
+            else:
+                occupied_houses = len([h for h, p in house_planets.items() if p])
+                st.markdown(f"**Houses Occupied:** {occupied_houses}")
+        with col4:
+            st.markdown(f"**Chart Type:** {chart_type.split(' - ')[0]}")
+
+    with tab2:
+        st.markdown("## Detailed Planetary Positions")
         
         # Get planet positions and house placements
         planets = chart.get_graha_positions()
@@ -730,52 +850,103 @@ if st.session_state.chart:
             for planet in planets_in_house:
                 planet_houses[planet] = house_num
         
-        # Create two columns for planets
-        col1, col2 = st.columns(2)
+        # Create comprehensive planetary data table
+        planetary_data = []
+        for name, data in planets.items():
+            # Calculate degrees within sign
+            degrees_in_sign = data['longitude'] % 30
+            
+            # Get house number
+            house_num = planet_houses.get(name, 'N/A')
+            
+            # Get dignity
+            graha = Graha(name, data['longitude'])
+            graha.rasi = data['rasi']
+            dignity = graha.get_dignity()
+            
+            # Get nakshatra name
+            nakshatra_info = data.get('nakshatra', 'Unknown')
+            if isinstance(nakshatra_info, dict):
+                nakshatra_name = nakshatra_info.get('name', 'Unknown')
+            else:
+                nakshatra_name = str(nakshatra_info)
+            
+            # Retrograde status
+            retrograde = "Yes" if data.get('is_retrograde', False) else "No"
+            
+            planetary_data.append({
+                'Planet': name,
+                'Sign': data['rasi'],
+                'Degrees': f"{degrees_in_sign:.2f}°",
+                'Nakshatra': nakshatra_name,
+                'House': house_num,
+                'Dignity': dignity if dignity else 'Normal',
+                'Retrograde': retrograde
+            })
         
-        planet_list = list(planets.items())
-        half = len(planet_list) // 2
+        # Display as sortable table
+        import pandas as pd
+        df = pd.DataFrame(planetary_data)
+        
+        # Add sorting options
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            sort_by = st.selectbox(
+                "Sort by",
+                options=['Planet', 'Sign', 'House', 'Dignity', 'Retrograde'],
+                help="Choose column to sort by"
+            )
+        
+        # Sort dataframe
+        if sort_by == 'House':
+            # Convert house to numeric for proper sorting
+            df['House_Numeric'] = pd.to_numeric(df['House'], errors='coerce')
+            df_sorted = df.sort_values('House_Numeric').drop('House_Numeric', axis=1)
+        else:
+            df_sorted = df.sort_values(sort_by)
+        
+        # Display table
+        st.dataframe(
+            df_sorted,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                'Planet': st.column_config.TextColumn('🪐 Planet', width='medium'),
+                'Sign': st.column_config.TextColumn('♈ Sign', width='medium'),
+                'Degrees': st.column_config.TextColumn('📐 Degrees', width='small'),
+                'Nakshatra': st.column_config.TextColumn('⭐ Nakshatra', width='medium'),
+                'House': st.column_config.TextColumn('🏠 House', width='small'),
+                'Dignity': st.column_config.TextColumn('👑 Dignity', width='medium'),
+                'Retrograde': st.column_config.TextColumn('↩️ Retrograde', width='small')
+            }
+        )
+        
+        # Additional planetary analysis
+        st.markdown("### Planetary Analysis")
+        
+        col1, col2, col3 = st.columns(3)
         
         with col1:
-            for name, data in planet_list[:half]:
-                st.markdown(f"<div class='planet-card'>", unsafe_allow_html=True)
-                st.markdown(f"### {name}")
-                house_num = planet_houses.get(name, 'N/A')
-                st.markdown(f"**Sign:** {data['rasi']} | **House:** {house_num}")
-                degrees_in_sign = data['longitude'] % 30
-                st.markdown(f"**Longitude:** {degrees_in_sign:.2f}° | **Nakshatra:** {data['nakshatra']}")
-                
-                # Get dignity for the planet
-                graha = Graha(name, data['longitude'])
-                graha.rasi = data['rasi']
-                dignity = graha.get_dignity()
-                st.markdown(f"**Dignity:** {dignity if dignity else 'Normal'}")
-                
-                if data.get('is_retrograde', False):
-                    st.markdown("**Status:** Retrograde ↩️")
-                st.markdown("</div>", unsafe_allow_html=True)
-        
+            # Strong planets
+            strong_planets = [row['Planet'] for row in planetary_data 
+                            if 'Exalted' in row['Dignity'] or 'Own' in row['Dignity']]
+            if strong_planets:
+                st.success(f"**Strong Planets**: {', '.join(strong_planets)}")
+            
         with col2:
-            for name, data in planet_list[half:]:
-                st.markdown(f"<div class='planet-card'>", unsafe_allow_html=True)
-                st.markdown(f"### {name}")
-                house_num = planet_houses.get(name, 'N/A')
-                st.markdown(f"**Sign:** {data['rasi']} | **House:** {house_num}")
-                degrees_in_sign = data['longitude'] % 30
-                st.markdown(f"**Longitude:** {degrees_in_sign:.2f}° | **Nakshatra:** {data['nakshatra']}")
-                
-                # Get dignity for the planet
-                graha = Graha(name, data['longitude'])
-                graha.rasi = data['rasi']
-                dignity = graha.get_dignity()
-                st.markdown(f"**Dignity:** {dignity if dignity else 'Normal'}")
-                
-                if data.get('is_retrograde', False):
-                    st.markdown("**Status:** Retrograde ↩️")
-                st.markdown("</div>", unsafe_allow_html=True)
-    
-    with tab2:
-        st.markdown("## House Analysis")
+            # Retrograde planets
+            retrograde_planets = [row['Planet'] for row in planetary_data if row['Retrograde'] == 'Yes']
+            if retrograde_planets:
+                st.warning(f"**Retrograde Planets**: {', '.join(retrograde_planets)}")
+            
+        with col3:
+            # Debilitated planets
+            weak_planets = [row['Planet'] for row in planetary_data 
+                          if 'Debilitated' in row['Dignity']]
+            if weak_planets:
+                st.error(f"**Debilitated Planets**: {', '.join(weak_planets)}")
+
+    with tab3:
         
         # Get house data and analysis
         houses = chart.get_bhavas()
@@ -1201,6 +1372,8 @@ else:
     - 👁️ Traditional aspect calculations
     - 🎯 Yoga detection
     - 💾 Export chart data as JSON
+    
+    **New!** Check out the Research Interface in the sidebar for batch chart processing and analysis!
     """)
     st.markdown("</div>", unsafe_allow_html=True)
 
