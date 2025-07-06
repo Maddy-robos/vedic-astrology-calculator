@@ -147,17 +147,55 @@ class Conversions:
         
         Args:
             local_time: Local datetime
-            timezone_str: Timezone string (e.g., 'Asia/Kolkata')
+            timezone_str: Timezone string (e.g., 'Asia/Kolkata', 'UTC+05:30')
             
         Returns:
             UTC datetime
         """
         if local_time.tzinfo is None:
-            # Assume the datetime is in the specified timezone
-            tz = pytz.timezone(timezone_str)
-            local_time = tz.localize(local_time)
+            # Parse timezone string to get offset
+            tz_offset_hours = self._parse_timezone_string(timezone_str)
+            
+            # Create UTC offset timezone
+            tz_offset = timedelta(hours=tz_offset_hours)
+            tz = timezone(tz_offset)
+            local_time = local_time.replace(tzinfo=tz)
             
         return local_time.astimezone(timezone.utc)
+    
+    def _parse_timezone_string(self, timezone_str: str) -> float:
+        """Parse timezone string to hours offset."""
+        timezone_str = timezone_str.strip()
+        
+        # Handle IANA timezone names
+        if '/' in timezone_str:
+            try:
+                tz = pytz.timezone(timezone_str)
+                # Use a reference date to get offset
+                ref_dt = datetime(2000, 1, 1)
+                localized = tz.localize(ref_dt)
+                return localized.utcoffset().total_seconds() / 3600.0
+            except:
+                pass
+        
+        # Handle UTC offset format (+05:30, -08:00, etc.)
+        if timezone_str.startswith(('+', '-')) or timezone_str.startswith('UTC'):
+            # Remove 'UTC' prefix if present
+            if timezone_str.startswith('UTC'):
+                timezone_str = timezone_str[3:]
+            
+            # Parse +HH:MM or -HH:MM format
+            if ':' in timezone_str:
+                parts = timezone_str.split(':')
+                hours = int(parts[0])
+                minutes = int(parts[1])
+                return hours + (minutes / 60.0) * (1 if hours >= 0 else -1)
+            else:
+                # Handle +HH or -HH format
+                return float(timezone_str)
+        
+        # Default to UTC
+        return 0.0
     
     def utc_to_local(self, utc_time: datetime, timezone_str: str) -> datetime:
         """

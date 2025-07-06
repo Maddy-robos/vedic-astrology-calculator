@@ -4,7 +4,9 @@ import os
 import sys
 from datetime import datetime
 import json
-from io import StringIO
+import zipfile
+import tempfile
+from io import StringIO, BytesIO
 
 # Add project root and CoreLibrary to path
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -14,6 +16,8 @@ sys.path.insert(0, os.path.join(project_root, 'CoreLibrary'))
 from chart import Chart
 from calculations_helper import CalculationsHelper
 from chart_visualization import NorthIndianChart
+from jhd_converter import JHDConverter
+from file_handler import FileHandler
 
 def format_planetary_data(grahas, house_planets):
     """
@@ -129,7 +133,7 @@ with st.sidebar:
     )
 
 # Main content area
-tab1, tab2, tab3 = st.tabs(["📤 Upload Data", "📊 View Charts", "📈 Analysis"])
+tab1, tab2, tab3, tab4 = st.tabs(["📤 Upload CSV", "🗂️ Upload JHD", "📊 View Charts", "📈 Analysis & Export"])
 
 with tab1:
     st.header("Upload CSV File")
@@ -259,6 +263,219 @@ Robert Johnson,1992-12-10,23:45:00,13.0827,80.2707,Asia/Kolkata,Chennai"""
             st.error(f"Error reading CSV file: {str(e)}")
 
 with tab2:
+    st.header("Upload JHD Files")
+    
+    # File upload for JHD files
+    uploaded_jhd_files = st.file_uploader(
+        "Choose JHD files or ZIP archive",
+        type=['jhd', 'zip'],
+        accept_multiple_files=True,
+        help="Upload .jhd files individually or a .zip archive containing multiple .jhd files"
+    )
+    
+    # JHD Format Information
+    with st.expander("📋 JHD Format Information"):
+        st.markdown("""
+        **JHD (Jyotish Hierarchical Data)** files are used by Jagannatha Hora and other Vedic astrology software.
+        
+        **What you can upload:**
+        - Individual .jhd files
+        - Multiple .jhd files at once
+        - ZIP archives containing .jhd files
+        
+        **JHD files contain:**
+        - Birth date and time
+        - Geographic coordinates
+        - Timezone information
+        - Place names
+        
+        **Supported sources:**
+        - Jagannatha Hora exports
+        - Other Vedic astrology software
+        - Custom JHD files following the standard format
+        """)
+    
+    # Initialize JHD converter and file handler
+    jhd_converter = JHDConverter()
+    file_handler = FileHandler()
+    
+    # Process uploaded JHD files
+    if uploaded_jhd_files:
+        try:
+            # Collect all JHD files
+            jhd_file_contents = []
+            temp_files = []
+            
+            for uploaded_file in uploaded_jhd_files:
+                if uploaded_file.name.endswith('.zip'):
+                    # Handle ZIP files
+                    st.subheader(f"Processing ZIP: {uploaded_file.name}")
+                    
+                    # Create temporary ZIP file
+                    temp_zip = tempfile.NamedTemporaryFile(delete=False, suffix='.zip')
+                    temp_zip.write(uploaded_file.read())
+                    temp_zip.close()
+                    temp_files.append(temp_zip.name)
+                    
+                    # Extract JHD files from ZIP
+                    with zipfile.ZipFile(temp_zip.name, 'r') as zf:
+                        jhd_files_in_zip = [f for f in zf.namelist() if f.endswith('.jhd')]
+                        st.info(f"Found {len(jhd_files_in_zip)} JHD files in ZIP archive")
+                        
+                        for jhd_filename in jhd_files_in_zip:
+                            with zf.open(jhd_filename) as jhd_file:
+                                content = jhd_file.read().decode('utf-8')
+                                jhd_file_contents.append({
+                                    'filename': jhd_filename,
+                                    'content': content,
+                                    'source': f"{uploaded_file.name} -> {jhd_filename}"
+                                })
+                
+                elif uploaded_file.name.endswith('.jhd'):
+                    # Handle individual JHD files
+                    content = uploaded_file.read().decode('utf-8')
+                    jhd_file_contents.append({
+                        'filename': uploaded_file.name,
+                        'content': content,
+                        'source': uploaded_file.name
+                    })
+            
+            if jhd_file_contents:
+                st.success(f"✅ Found {len(jhd_file_contents)} JHD files")
+                
+                # Display preview
+                st.subheader("JHD Files Preview")
+                preview_data = []
+                
+                for jhd_data in jhd_file_contents[:5]:  # Show first 5 files
+                    # Create temporary file to validate
+                    temp_jhd = tempfile.NamedTemporaryFile(mode='w', suffix='.jhd', delete=False)
+                    temp_jhd.write(jhd_data['content'])
+                    temp_jhd.close()
+                    temp_files.append(temp_jhd.name)
+                    
+                    # Validate JHD format
+                    validation = jhd_converter.validate_jhd_format(temp_jhd.name)
+                    
+                    if validation['valid']:
+                        birth_data = validation['birth_data']
+                        preview_data.append({
+                            'File': jhd_data['filename'],
+                            'Name': birth_data['name'],
+                            'Date': birth_data['birth_datetime'].strftime('%Y-%m-%d'),
+                            'Time': birth_data['birth_datetime'].strftime('%H:%M:%S'),
+                            'Place': birth_data['place_name'],
+                            'Status': '✅ Valid'
+                        })
+                    else:
+                        preview_data.append({
+                            'File': jhd_data['filename'],
+                            'Name': 'Error',
+                            'Date': 'Error',
+                            'Time': 'Error',
+                            'Place': 'Error',
+                            'Status': f"❌ {validation['errors'][0]}"
+                        })
+                
+                if preview_data:
+                    df_preview = pd.DataFrame(preview_data)
+                    st.dataframe(df_preview, use_container_width=True)
+                    
+                    if len(jhd_file_contents) > 5:
+                        st.info(f"Showing first 5 files. Total files to process: {len(jhd_file_contents)}")
+                
+                # Process button
+                if st.button("🚀 Process JHD Files", type="primary"):
+                    progress_bar = st.progress(0)
+                    status_text = st.empty()
+                    
+                    processed_charts = []
+                    errors = []
+                    
+                    for idx, jhd_data in enumerate(jhd_file_contents):
+                        try:
+                            # Update progress
+                            progress = (idx + 1) / len(jhd_file_contents)
+                            progress_bar.progress(progress)
+                            status_text.text(f"Processing {jhd_data['filename']} ({idx + 1}/{len(jhd_file_contents)})")
+                            
+                            # Create temporary file
+                            temp_jhd = tempfile.NamedTemporaryFile(mode='w', suffix='.jhd', delete=False)
+                            temp_jhd.write(jhd_data['content'])
+                            temp_jhd.close()
+                            temp_files.append(temp_jhd.name)
+                            
+                            # Parse JHD file
+                            birth_data = jhd_converter._parse_jhd_file(temp_jhd.name)
+                            
+                            # Create chart
+                            # Format timezone properly (e.g., UTC+08:00 instead of UTC+8.0)
+                            tz_offset = birth_data['timezone_offset']
+                            if tz_offset >= 0:
+                                tz_str = f"UTC+{int(tz_offset):02d}:{int((tz_offset % 1) * 60):02d}"
+                            else:
+                                tz_str = f"UTC{int(tz_offset):03d}:{int((abs(tz_offset) % 1) * 60):02d}"
+                            
+                            chart = Chart(
+                                birth_datetime=birth_data['birth_datetime'],
+                                latitude=birth_data['latitude'],
+                                longitude=birth_data['longitude'],
+                                timezone_str=tz_str,
+                                ayanamsa=ayanamsa,
+                                house_system=house_system
+                            )
+                            
+                            # Store processed chart
+                            chart_data = {
+                                'name': birth_data['name'],
+                                'chart': chart,
+                                'birth_datetime': birth_data['birth_datetime'],
+                                'place': birth_data['place_name'],
+                                'chart_data': chart.get_chart_summary(),
+                                'source': jhd_data['source'],
+                                'data_format': 'JHD'
+                            }
+                            processed_charts.append(chart_data)
+                            
+                        except Exception as e:
+                            errors.append({
+                                'file': jhd_data['filename'],
+                                'error': str(e)
+                            })
+                    
+                    # Clear progress
+                    progress_bar.empty()
+                    status_text.empty()
+                    
+                    # Store in session state
+                    if 'processed_charts' not in st.session_state:
+                        st.session_state.processed_charts = []
+                    
+                    # Add to existing charts
+                    st.session_state.processed_charts.extend(processed_charts)
+                    
+                    # Show results
+                    st.success(f"✅ Successfully processed {len(processed_charts)} JHD files")
+                    
+                    if errors:
+                        with st.expander(f"⚠️ {len(errors)} errors occurred"):
+                            for error in errors:
+                                st.error(f"File {error['file']}: {error['error']}")
+                    
+                    # Auto-switch to View Charts tab
+                    st.info("👉 Switch to the 'View Charts' tab to see the results")
+            
+            # Cleanup temporary files
+            for temp_file in temp_files:
+                try:
+                    os.unlink(temp_file)
+                except:
+                    pass
+                    
+        except Exception as e:
+            st.error(f"Error processing JHD files: {str(e)}")
+
+with tab3:
     st.header("View Charts")
     
     if not st.session_state.processed_charts:
@@ -484,8 +701,8 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
     
     st.markdown("---")
 
-with tab3:
-    st.header("Analysis Tools")
+with tab4:
+    st.header("Analysis & Export Tools")
     
     if not st.session_state.processed_charts:
         st.info("📤 Please upload and process a CSV file first.")
@@ -546,7 +763,13 @@ with tab3:
         st.divider()
         st.subheader("Export Data")
         
-        col1, col2, col3 = st.columns(3)
+        # Show dataset info
+        csv_count = len([c for c in st.session_state.processed_charts if c.get('data_format', 'CSV') == 'CSV'])
+        jhd_count = len([c for c in st.session_state.processed_charts if c.get('data_format') == 'JHD'])
+        
+        st.info(f"📊 Current dataset: {len(st.session_state.processed_charts)} charts ({csv_count} from CSV, {jhd_count} from JHD)")
+        
+        col1, col2, col3, col4 = st.columns(4)
         
         with col1:
             if st.button("📄 Export to JSON"):
@@ -678,5 +901,123 @@ with tab3:
                         st.info("Note: Make sure openpyxl is installed for Excel export.")
         
         with col3:
+            if st.button("🗂️ Export to CSV"):
+                # Convert current dataset to CSV format
+                with st.spinner("Preparing CSV export..."):
+                    try:
+                        jhd_converter = JHDConverter()
+                        
+                        # Prepare CSV data
+                        csv_data = []
+                        for chart_info in st.session_state.processed_charts:
+                            dt = chart_info['birth_datetime']
+                            
+                            # Extract timezone info if available
+                            if hasattr(chart_info.get('chart'), 'timezone_str'):
+                                timezone_str = chart_info['chart'].timezone_str
+                            else:
+                                timezone_str = "UTC+00:00"  # Default
+                            
+                            csv_row = {
+                                'name': chart_info['name'],
+                                'date': dt.strftime('%Y-%m-%d'),
+                                'time': dt.strftime('%H:%M:%S'),
+                                'latitude': chart_info['chart_data']['ascendant'].get('latitude', 0.0),
+                                'longitude': chart_info['chart_data']['ascendant'].get('longitude', 0.0),
+                                'timezone': timezone_str,
+                                'place_name': chart_info['place'],
+                                'source_format': chart_info.get('data_format', 'CSV'),
+                                'source_file': chart_info.get('source', 'Unknown')
+                            }
+                            csv_data.append(csv_row)
+                        
+                        # Create DataFrame and CSV
+                        df = pd.DataFrame(csv_data)
+                        csv_string = df.to_csv(index=False)
+                        
+                        st.download_button(
+                            label="📥 Download CSV File",
+                            data=csv_string,
+                            file_name=f"vedic_charts_export_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                            mime="text/csv"
+                        )
+                        
+                        st.success("✅ CSV file prepared successfully!")
+                        
+                    except Exception as e:
+                        st.error(f"Error creating CSV file: {str(e)}")
+        
+        with col4:
+            if st.button("📦 Export to JHD ZIP"):
+                # Convert current dataset to JHD files in ZIP
+                with st.spinner("Preparing JHD ZIP export..."):
+                    try:
+                        jhd_converter = JHDConverter()
+                        
+                        # Prepare data for JHD conversion
+                        csv_data = []
+                        for chart_info in st.session_state.processed_charts:
+                            dt = chart_info['birth_datetime']
+                            
+                            # Get coordinates from chart data
+                            chart_summary = chart_info['chart_data']
+                            
+                            csv_row = {
+                                'name': chart_info['name'],
+                                'date': dt.strftime('%Y-%m-%d'),
+                                'time': dt.strftime('%H:%M:%S'),
+                                'latitude': chart_summary.get('location', {}).get('latitude', 0.0),
+                                'longitude': chart_summary.get('location', {}).get('longitude', 0.0),
+                                'timezone': 'UTC+00:00',  # Will be converted appropriately
+                                'place_name': chart_info['place']
+                            }
+                            csv_data.append(csv_row)
+                        
+                        # Convert to DataFrame
+                        df = pd.DataFrame(csv_data)
+                        
+                        # Create JHD ZIP
+                        zip_filename = f"vedic_charts_jhd_{datetime.now().strftime('%Y%m%d_%H%M%S')}.zip"
+                        
+                        # Create in-memory ZIP
+                        zip_buffer = BytesIO()
+                        
+                        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zf:
+                            for idx, row in df.iterrows():
+                                try:
+                                    # Extract birth data
+                                    birth_data = jhd_converter._extract_birth_data_from_row(row)
+                                    
+                                    # Generate JHD content
+                                    jhd_content = jhd_converter._create_jhd_content(birth_data)
+                                    
+                                    # Create filename
+                                    filename = jhd_converter._generate_jhd_filename(birth_data)
+                                    
+                                    # Add to ZIP
+                                    zf.writestr(filename, jhd_content)
+                                    
+                                except Exception as e:
+                                    st.warning(f"Could not convert {row['name']} to JHD: {e}")
+                        
+                        zip_buffer.seek(0)
+                        
+                        st.download_button(
+                            label="📥 Download JHD ZIP",
+                            data=zip_buffer.getvalue(),
+                            file_name=zip_filename,
+                            mime="application/zip"
+                        )
+                        
+                        st.success("✅ JHD ZIP file prepared successfully!")
+                        
+                    except Exception as e:
+                        st.error(f"Error creating JHD ZIP: {str(e)}")
+
+        # Second row of export options
+        st.markdown("### Additional Export Options")
+        col5, col6, col7, col8 = st.columns(4)
+        
+        with col5:
             if st.button("📑 Export to PDF"):
                 st.info("🚧 PDF export coming soon!")
