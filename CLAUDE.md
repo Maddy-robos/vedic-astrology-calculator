@@ -241,3 +241,5 @@ Project structure:
 9. **Placeholder Data**: Currently uses sample planetary positions. For production accuracy, integrate Swiss Ephemeris
 
 10. **Usage**: Run `python main.py` for interactive chart calculation, or use the Chart class directly in your code
+
+11. There's a `future_work` folder where the main user requests can be logged in as a requirements md as well as another todo md file which can be stricken off as the todos are done. This ensures neat project structure

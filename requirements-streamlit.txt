@@ -1,7 +1,30 @@
+# Vedic Astrology Research Platform - Streamlit Requirements
+# Updated to support JHD (Jyotish Hierarchical Data) format conversion
+# and enhanced research interface with bidirectional CSV ↔ JHD support
+
+# Core Streamlit and web app dependencies
 streamlit>=1.29.0
 pandas>=2.0.0
 requests>=2.31.0
+
+# Core application dependencies  
+scipy>=1.10.0          # Scientific computing
+
+# Astronomical calculations
 pyswisseph>=2.10.3.1
 numpy>=1.24.0
+
+# Date and time handling  
 python-dateutil>=2.8.2
 pytz>=2023.3
+
+# File handling and processing (required for JHD support)
+openpyxl>=3.1.0        # Excel file support
+python-magic>=0.4.27   # File type detection (optional, falls back gracefully)
+
+# Note: The following are built-in Python modules and don't need installation:
+# zipfile, tempfile, typing, json, re, csv, mimetypes, io, os, sys, math, argparse, logging, pathlib
+
+# For enhanced research interface  
+matplotlib>=3.7.0      # Plotting (if used for visualizations)
+seaborn>=0.12.0        # Statistical plots (if used)

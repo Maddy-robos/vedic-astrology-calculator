@@ -260,6 +260,165 @@ class SwissEphemeris:
         
         return (d, m, s)
     
+    def track_planetary_motion(self, jd: float, planet: str, days_back: int = 365) -> Dict:
+        """
+        Track planetary motion to find when planet entered current sign and max forward position
+        
+        Args:
+            jd: Julian Day Number for birth time
+            planet: Planet name
+            days_back: Number of days to look back (default 365)
+            
+        Returns:
+            Dictionary with entry_point and max_forward degrees
+        """
+        try:
+            # Get current position
+            current_pos = self.get_planet_position(planet, jd)
+            if not current_pos:
+                return {}
+                
+            current_sign = int(current_pos['longitude'] / 30)
+            current_degrees_in_sign = current_pos['longitude'] % 30
+            
+            # Track positions going back in time
+            entry_point = None
+            entry_date = None
+            max_forward = current_degrees_in_sign
+            max_forward_date = jd
+            min_position = current_degrees_in_sign
+            found_entry = False
+            retrograde_start_date = None
+            retrograde_end_date = None
+            was_retrograde = False
+            
+            # Check positions day by day going backwards
+            for i in range(1, days_back + 1):
+                check_jd = jd - i
+                pos = self.get_planet_position(planet, check_jd)
+                
+                if pos:
+                    sign = int(pos['longitude'] / 30)
+                    degrees_in_sign = pos['longitude'] % 30
+                    
+                    # Track maximum and minimum positions in current sign
+                    if sign == current_sign:
+                        if degrees_in_sign > max_forward:
+                            max_forward = degrees_in_sign
+                            max_forward_date = check_jd
+                        if degrees_in_sign < min_position:
+                            min_position = degrees_in_sign
+                            
+                        # Check for retrograde motion
+                        if i > 1 and not was_retrograde:
+                            # Get previous day's position
+                            prev_jd = jd - (i - 1)
+                            prev_pos = self.get_planet_position(planet, prev_jd)
+                            if prev_pos and int(prev_pos['longitude'] / 30) == current_sign:
+                                prev_degrees = prev_pos['longitude'] % 30
+                                # If current day has higher degrees than next day, planet started retrograde
+                                if degrees_in_sign > prev_degrees and not retrograde_start_date:
+                                    retrograde_start_date = check_jd
+                                    was_retrograde = True
+                    
+                    # Check if planet was in different sign
+                    if sign != current_sign and not found_entry:
+                        # Found the day before entry, now find exact entry point
+                        # Check hourly for more precision
+                        for hour in range(24):
+                            hour_jd = check_jd + (hour / 24.0)
+                            hour_pos = self.get_planet_position(planet, hour_jd)
+                            if hour_pos:
+                                hour_sign = int(hour_pos['longitude'] / 30)
+                                if hour_sign == current_sign:
+                                    entry_point = hour_pos['longitude'] % 30
+                                    entry_date = hour_jd
+                                    found_entry = True
+                                    break
+                        
+                        if not found_entry:
+                            # Use next day's first position as entry
+                            next_pos = self.get_planet_position(planet, check_jd + 1)
+                            if next_pos:
+                                entry_point = next_pos['longitude'] % 30
+                                entry_date = check_jd + 1
+                                found_entry = True
+                        break
+            
+            # If still no entry point found, use minimum position found
+            if entry_point is None:
+                entry_point = min_position
+                entry_date = jd - days_back  # Approximate
+                
+            # Convert Julian dates to readable format
+            from datetime import datetime
+            
+            def jd_to_datetime(jd):
+                """Convert Julian Day to datetime"""
+                if jd is None:
+                    return None
+                a = int(jd + 0.5)
+                if a < 2299161:
+                    b = 0
+                else:
+                    alpha = int((a - 1867216.25) / 36524.25)
+                    b = a + 1 + alpha - int(alpha / 4)
+                
+                c = b + 1524
+                d = int((c - 122.1) / 365.25)
+                e = int(365.25 * d)
+                f = int((c - e) / 30.6001)
+                
+                day = c - e - int(30.6001 * f)
+                month = f - 1 if f <= 13 else f - 13
+                year = d - 4716 if f <= 13 else d - 4715
+                
+                # Extract time
+                fraction = jd + 0.5 - int(jd + 0.5)
+                hours = int(fraction * 24)
+                minutes = int((fraction * 24 - hours) * 60)
+                
+                return datetime(year, month, day, hours, minutes)
+                
+            return {
+                'entry_point': entry_point,
+                'entry_date': jd_to_datetime(entry_date) if entry_date else None,
+                'max_forward': max_forward,
+                'max_forward_date': jd_to_datetime(max_forward_date) if max_forward_date else None,
+                'current_position': current_degrees_in_sign,
+                'retrograde_start_date': jd_to_datetime(retrograde_start_date) if retrograde_start_date else None,
+                'is_retrograde': current_pos.get('is_retrograde', False),
+                'total_travel': (max_forward - entry_point) + (max_forward - current_degrees_in_sign) if max_forward > current_degrees_in_sign else current_degrees_in_sign - entry_point
+            }
+            
+        except Exception as e:
+            print(f"Error tracking planetary motion for {planet}: {e}")
+            return {}
+    
+    def calculate_retrograde_data(self, jd: float, days_back: int = 365) -> Dict:
+        """
+        Calculate motion data for all planets (retrograde and direct)
+        
+        Args:
+            jd: Julian Day Number for birth time
+            days_back: Number of days to look back
+            
+        Returns:
+            Dictionary with motion data for each planet
+        """
+        motion_data_all = {}
+        
+        # All planets that need motion tracking (exclude Rahu, Ketu which have special rules)
+        # Include Sun and Moon even though they don't retrograde, to track their motion
+        planets_to_track = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn']
+        
+        for planet in planets_to_track:
+            motion_data = self.track_planetary_motion(jd, planet, days_back)
+            if motion_data:
+                motion_data_all[planet] = motion_data
+                
+        return motion_data_all
+    
     def close(self):
         """Close Swiss Ephemeris and free resources"""
         swe.close()

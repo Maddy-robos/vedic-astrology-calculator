@@ -1,3 +1,7 @@
+# Vedic Astrology Research Platform - Complete Requirements
+# Updated to support JHD (Jyotish Hierarchical Data) format conversion
+# and enhanced file handling capabilities
+
 # Core astronomical calculations
 pyswisseph==2.10.3.1  # Swiss Ephemeris for accurate planetary positions
 astropy==5.3.4        # Alternative astronomical calculations
@@ -16,6 +20,7 @@ scipy==1.11.1         # Scientific computing
 openpyxl==3.1.2       # Excel file support
 xlsxwriter==3.1.2     # Writing Excel files
 python-docx==0.8.11   # Word document support
+python-magic==0.4.27  # File type detection (for JHD support)
 
 # Visualization (for research)
 matplotlib==3.7.2     # Plotting and charts

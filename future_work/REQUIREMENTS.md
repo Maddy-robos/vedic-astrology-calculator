@@ -36,6 +36,21 @@
   - place_name
   - notes
 
+### JHD File Support (NEW)
+- **Accepted Formats**: 
+  - Individual .jhd files
+  - Multiple .jhd files simultaneously
+  - ZIP archives containing .jhd files
+- **JHD Format Compatibility**:
+  - Jagannatha Hora native format
+  - 17+ line format with birth details
+  - Geographic coordinates and timezone data
+  - Place name and country information
+- **Bidirectional Conversion**:
+  - JHD to CSV conversion
+  - CSV to JHD conversion
+  - Batch processing capabilities
+
 ### Batch Processing
 - **Capacity**: Handle 100+ charts efficiently
 - **Progress Indicator**: Show processing status
@@ -94,11 +109,27 @@ Following Parashara's system:
 - **Excel**: Tabular data with multiple sheets
 - **JSON**: Complete chart data for further processing
 - **PNG/SVG**: Individual chart images
+- **CSV**: Standardized birth data format
+- **JHD**: Individual files or ZIP archives (NEW)
 
 ### Export Options
 - **Single Chart**: Full detailed report
 - **Batch Export**: Multiple charts in one file
 - **Custom Selection**: Choose specific data points
+- **Format Conversion**: 
+  - Convert loaded data between CSV and JHD formats
+  - Maintain data integrity across formats
+  - Preserve timezone and coordinate information
+
+### Export Data Integrity Requirements (PENDING FIXES)
+- **CSV Export Completeness**: 
+  - MUST include latitude/longitude coordinates for all charts
+  - MUST preserve original birth location data
+  - MUST maintain timezone information accuracy
+- **Planetary Data Accuracy**:
+  - MUST include proper dignity calculations (exaltation, own sign, debilitation)
+  - MUST display correct planetary strengths and classifications
+  - MUST match dignity calculations from main application interface
 
 ## 5. Analysis Tools
 

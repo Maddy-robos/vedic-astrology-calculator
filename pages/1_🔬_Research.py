@@ -592,6 +592,12 @@ with tab3:
                             # Show chart info
                             st.markdown(info_text)
                             
+                            # Add Panchanga info
+                            panchanga = chart_info['chart'].get_panchanga()
+                            if panchanga:
+                                panchanga_text = f"**Nakshatra**: {panchanga['nakshatra']['name']} | **Tithi**: {panchanga['tithi']['name']}"
+                                st.caption(panchanga_text)
+                            
                             # Add View Details button
                             chart_absolute_index = start_idx + i + j
                             if st.button(f"🔍 View Details", key=f"details_{chart_absolute_index}"):
@@ -629,10 +635,10 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
             st.session_state.selected_chart_index = None
             st.rerun()
     
-    # Chart and planetary details in columns
-    col1, col2 = st.columns([1, 2])
+    # Create tabs for detailed view
+    detail_tabs = st.tabs(["📊 Chart", "🪐 Planets", "👑 Chara Karakas", "📅 Panchanga"])
     
-    with col1:
+    with detail_tabs[0]:
         st.markdown("#### 📊 Chart")
         
         # Display the chart
@@ -667,7 +673,7 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
             )
         
         # Generate larger chart for details view
-        ni_chart = NorthIndianChart(width=300, height=300)
+        ni_chart = NorthIndianChart(width=400, height=400)
         svg_string = ni_chart.generate_chart(
             lagna_sign=lagna_sign,
             house_planets=house_planets,
@@ -676,7 +682,7 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
         )
         st.markdown(svg_string, unsafe_allow_html=True)
     
-    with col2:
+    with detail_tabs[1]:
         st.markdown("#### 🪐 Planetary Positions")
         
         # Use unified formatting function
@@ -699,22 +705,100 @@ if st.session_state.show_chart_details and st.session_state.selected_chart_index
             }
         )
         
-        # Navigation buttons for browsing charts
-        st.markdown("#### 📚 Navigate Charts")
-        nav_col1, nav_col2, nav_col3 = st.columns(3)
+    
+    with detail_tabs[2]:
+        st.markdown("#### 👑 Chara Karakas")
         
-        with nav_col1:
-            if st.button("⬅️ Previous Chart", disabled=st.session_state.selected_chart_index == 0):
-                st.session_state.selected_chart_index -= 1
-                st.rerun()
+        # Get Chara Karakas
+        chara_karakas = selected_chart['chart'].get_chara_karakas()
         
-        with nav_col2:
-            st.markdown(f"**{st.session_state.selected_chart_index + 1}** of **{len(st.session_state.processed_charts)}**")
+        if chara_karakas:
+            # Display standard calculation
+            st.markdown("##### Standard Method (By Degrees in Sign)")
+            
+            standard_data = []
+            for result in chara_karakas['standard']:
+                standard_data.append({
+                    'Karaka': result.karaka,
+                    'Planet': result.planet,
+                    'Degrees': f"{result.degrees:.2f}°"
+                })
+            
+            if standard_data:
+                df_standard = pd.DataFrame(standard_data)
+                st.dataframe(df_standard, use_container_width=True, hide_index=True)
+            
+            # Display advanced calculation
+            st.markdown("##### Advanced Method (By Total Degrees Traveled)")
+            
+            advanced_data = []
+            for result in chara_karakas['advanced']:
+                advanced_data.append({
+                    'Karaka': result.karaka,
+                    'Planet': result.planet,
+                    'Total Degrees': f"{result.degrees:.2f}°"
+                })
+            
+            if advanced_data:
+                df_advanced = pd.DataFrame(advanced_data)
+                st.dataframe(df_advanced, use_container_width=True, hide_index=True)
+        else:
+            st.info("Unable to calculate Chara Karakas")
+    
+    with detail_tabs[3]:
+        st.markdown("#### 📅 Panchanga")
         
-        with nav_col3:
-            if st.button("Next Chart ➡️", disabled=st.session_state.selected_chart_index == len(st.session_state.processed_charts) - 1):
-                st.session_state.selected_chart_index += 1
-                st.rerun()
+        # Get Panchanga
+        panchanga = selected_chart['chart'].get_panchanga()
+        
+        if panchanga:
+            # Display panchanga elements
+            panchanga_data = {
+                'Element': ['Vara', 'Tithi', 'Nakshatra', 'Yoga', 'Karana'],
+                'Value': [
+                    panchanga['vara']['name'],
+                    f"{panchanga['tithi']['number']} - {panchanga['tithi']['name']}",
+                    f"{panchanga['nakshatra']['name']} Pada {panchanga['nakshatra']['pada']}",
+                    f"{panchanga['yoga']['number']} - {panchanga['yoga']['name']}",
+                    f"{panchanga['karana']['number']} - {panchanga['karana']['name']}"
+                ],
+                'Lord/Nature': [
+                    panchanga['vara']['lord'],
+                    panchanga['tithi']['lord'],
+                    panchanga['nakshatra']['lord'],
+                    '🟢 Benefic' if panchanga['yoga']['benefic'] else '🔴 Malefic',
+                    '🟢 Benefic' if panchanga['karana']['benefic'] else '🔴 Malefic'
+                ],
+                'Progress': [
+                    'N/A',
+                    f"{panchanga['tithi']['percentage_complete']:.1f}%",
+                    f"{panchanga['nakshatra']['percentage_complete']:.1f}%",
+                    f"{panchanga['yoga']['percentage_complete']:.1f}%",
+                    f"{panchanga['karana']['percentage_complete']:.1f}%"
+                ]
+            }
+            df_panchanga = pd.DataFrame(panchanga_data)
+            st.dataframe(df_panchanga, use_container_width=True, hide_index=True)
+        else:
+            st.info("Unable to calculate Panchanga")
+    
+    # Navigation buttons outside tabs
+    st.markdown("---")
+    st.markdown("#### 📚 Navigate Charts")
+    nav_col1, nav_col2, nav_col3 = st.columns(3)
+    
+    with nav_col1:
+        if st.button("⬅️ Previous Chart", disabled=st.session_state.selected_chart_index == 0):
+            st.session_state.selected_chart_index -= 1
+            st.rerun()
+    
+    with nav_col2:
+        st.markdown(f"**{st.session_state.selected_chart_index + 1}** of **{len(st.session_state.processed_charts)}**")
+    
+    with nav_col3:
+        if st.button("Next Chart ➡️", disabled=st.session_state.selected_chart_index == len(st.session_state.processed_charts) - 1):
+            st.session_state.selected_chart_index += 1
+            st.rerun()
     
     st.markdown("---")
 

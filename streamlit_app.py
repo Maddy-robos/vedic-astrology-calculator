@@ -18,6 +18,7 @@ from calculations_helper import CalculationsHelper
 from graha import Graha
 from aspect_analysis import AspectAnalysis
 from chart_visualization import NorthIndianChart
+from chara_karaka import CharaKaraka
 
 # Set page config
 st.set_page_config(
@@ -715,7 +716,7 @@ if st.session_state.chart:
     st.markdown("</div>", unsafe_allow_html=True)
     
     # Tabs for different views
-    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(["📊 Chart", "🪐 Planets", "🏠 Houses", "👁️ Bhava Aspects", "☌ Conjunctions", "🎯 Yogas", "💾 Export"])
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(["📊 Chart", "🪐 Planets", "🏠 Houses", "👁️ Bhava Aspects", "👑 Chara Karakas", "📅 Panchanga", "☌ Conjunctions", "🎯 Yogas", "💾 Export"])
     
     with tab1:
         st.markdown("## Birth Chart Visualization")
@@ -1178,7 +1179,267 @@ if st.session_state.chart:
             except Exception as e:
                 st.error(f"Error analyzing aspects to House {selected_bhava}: {str(e)}")
     
-    with tab4:
+    with tab5:
+        st.markdown("## 👑 Chara Karakas (Variable Significators)")
+        
+        # Get Chara Karakas
+        chara_karakas = chart.get_chara_karakas()
+        
+        if chara_karakas:
+            # Display standard calculation
+            st.markdown("### Standard Method (By Degrees in Sign)")
+            st.markdown("*Planets sorted by their degrees in their respective signs*")
+            
+            standard_data = []
+            for result in chara_karakas['standard']:
+                karaka_info = CharaKaraka.KARAKA_NAMES.get(result.karaka, result.karaka)
+                standard_data.append({
+                    'Karaka': f"{result.karaka} - {karaka_info}",
+                    'Planet': result.planet,
+                    'Degrees': f"{result.degrees:.2f}°"
+                })
+            
+            if standard_data:
+                df_standard = pd.DataFrame(standard_data)
+                st.dataframe(df_standard, use_container_width=True, hide_index=True)
+            
+            # Display advanced calculation
+            st.markdown("### Advanced Method (By Total Degrees Traveled)")
+            st.markdown("*Considers retrograde motion and total distance traveled in current sign*")
+            
+            advanced_data = []
+            for result in chara_karakas['advanced']:
+                karaka_info = CharaKaraka.KARAKA_NAMES.get(result.karaka, result.karaka)
+                advanced_data.append({
+                    'Karaka': f"{result.karaka} - {karaka_info}",
+                    'Planet': result.planet,
+                    'Total Degrees': f"{result.degrees:.2f}°"
+                })
+            
+            if advanced_data:
+                df_advanced = pd.DataFrame(advanced_data)
+                st.dataframe(df_advanced, use_container_width=True, hide_index=True)
+                
+                # Display detailed retrograde motion information
+                if 'retrograde_data' in chara_karakas:
+                    st.markdown("### 🔍 Planetary Motion Details")
+                    st.markdown("*Click on any planet below to see its detailed motion history*")
+                    
+                    retrograde_data = chara_karakas['retrograde_data']
+                    
+                    # Create expanders for each planet
+                    for result in chara_karakas['advanced']:
+                        planet_name = result.planet
+                        
+                        if planet_name in retrograde_data and retrograde_data[planet_name]:
+                            motion_data = retrograde_data[planet_name]
+                            
+                            # Determine if planet is currently retrograde or has retrograded
+                            is_retro = motion_data.get('is_retrograde', False)
+                            has_retrograded = motion_data['max_forward'] > motion_data['current_position']
+                            
+                            # Create emoji based on motion status
+                            status_emoji = "🔴" if is_retro else ("🟡" if has_retrograded else "🟢")
+                            
+                            with st.expander(f"{status_emoji} {planet_name} Motion Timeline"):
+                                # Display motion timeline
+                                col1, col2, col3 = st.columns(3)
+                                
+                                with col1:
+                                    st.markdown("**Entry into Sign**")
+                                    if motion_data.get('entry_date'):
+                                        st.write(f"📅 {motion_data['entry_date'].strftime('%Y-%m-%d %H:%M')}")
+                                    st.write(f"📐 {motion_data['entry_point']:.2f}°")
+                                
+                                with col2:
+                                    st.markdown("**Maximum Forward**")
+                                    if motion_data.get('max_forward_date'):
+                                        st.write(f"📅 {motion_data['max_forward_date'].strftime('%Y-%m-%d %H:%M')}")
+                                    st.write(f"📐 {motion_data['max_forward']:.2f}°")
+                                
+                                with col3:
+                                    st.markdown("**Current Position**")
+                                    st.write(f"📐 {motion_data['current_position']:.2f}°")
+                                    status = "Retrograde" if is_retro else ("Direct" if not has_retrograded else "Direct (was retrograde)")
+                                    st.write(f"🔄 {status}")
+                                
+                                # Show retrograde dates if available
+                                if motion_data.get('retrograde_start_date'):
+                                    st.markdown("**Retrograde Period**")
+                                    st.write(f"Started: {motion_data['retrograde_start_date'].strftime('%Y-%m-%d %H:%M')}")
+                                
+                                # Visual progress bar
+                                st.markdown("**Motion Progress**")
+                                
+                                # Calculate percentages for visualization
+                                total_range = 30.0  # Full sign is 30 degrees
+                                entry_pct = (motion_data['entry_point'] / total_range) * 100
+                                current_pct = (motion_data['current_position'] / total_range) * 100
+                                max_pct = (motion_data['max_forward'] / total_range) * 100
+                                
+                                # Visual timeline using Streamlit components
+                                # Create progress bars to show motion
+                                progress_col1, progress_col2 = st.columns([1, 1])
+                                
+                                with progress_col1:
+                                    # Forward motion progress
+                                    forward_progress = (motion_data['max_forward'] - motion_data['entry_point']) / 30.0
+                                    st.progress(forward_progress, text=f"Forward: {motion_data['entry_point']:.1f}° → {motion_data['max_forward']:.1f}°")
+                                
+                                with progress_col2:
+                                    if has_retrograded:
+                                        # Retrograde motion progress
+                                        retro_progress = (motion_data['max_forward'] - motion_data['current_position']) / 30.0
+                                        st.progress(retro_progress, text=f"Retrograde: {motion_data['max_forward']:.1f}° → {motion_data['current_position']:.1f}°")
+                                    else:
+                                        st.info("No retrograde motion")
+                                
+                                # Alternative visual representation using metrics
+                                st.markdown("**Degree Positions**")
+                                position_col1, position_col2, position_col3 = st.columns(3)
+                                
+                                with position_col1:
+                                    st.metric("Entry", f"{motion_data['entry_point']:.2f}°", delta=None)
+                                
+                                with position_col2:
+                                    delta_from_entry = motion_data['max_forward'] - motion_data['entry_point']
+                                    st.metric("Maximum", f"{motion_data['max_forward']:.2f}°", delta=f"+{delta_from_entry:.2f}°")
+                                
+                                with position_col3:
+                                    delta_from_max = motion_data['current_position'] - motion_data['max_forward']
+                                    st.metric("Current", f"{motion_data['current_position']:.2f}°", delta=f"{delta_from_max:.2f}°")
+                                
+                                # Summary statistics
+                                st.markdown("**Motion Summary**")
+                                total_travel = motion_data.get('total_travel', 0)
+                                forward_travel = motion_data['max_forward'] - motion_data['entry_point']
+                                backward_travel = motion_data['max_forward'] - motion_data['current_position'] if has_retrograded else 0
+                                
+                                col1, col2, col3 = st.columns(3)
+                                with col1:
+                                    st.metric("Total Travel", f"{total_travel:.2f}°")
+                                with col2:
+                                    st.metric("Forward", f"{forward_travel:.2f}°")
+                                with col3:
+                                    st.metric("Backward", f"{backward_travel:.2f}°")
+            
+            # Karaka significations
+            st.markdown("### Karaka Significations")
+            col1, col2 = st.columns(2)
+            
+            karaka_meanings = {
+                'AK': ('Atma Karaka', 'Soul, Self, Life purpose'),
+                'AmK': ('Amatya Karaka', 'Career, Profession, Authority'),
+                'BK': ('Bhratri Karaka', 'Siblings, Courage, Communication'),
+                'MK': ('Matri Karaka', 'Mother, Emotions, Home'),
+                'PiK': ('Pitru Karaka', 'Father, Ancestors, Dharma'),
+                'PK': ('Putra Karaka', 'Children, Creativity, Intelligence'),
+                'GK': ('Gnati Karaka', 'Enemies, Obstacles, Competition'),
+                'DK': ('Dara Karaka', 'Spouse, Marriage, Partnerships')
+            }
+            
+            for i, (karaka, (full_name, signifies)) in enumerate(karaka_meanings.items()):
+                col = col1 if i % 2 == 0 else col2
+                with col:
+                    st.markdown(f"**{karaka} - {full_name}**")
+                    st.markdown(f"*{signifies}*")
+        else:
+            st.info("Unable to calculate Chara Karakas")
+    
+    with tab6:
+        st.markdown("## 📅 Panchanga (Five Limbs of Time)")
+        
+        # Get Panchanga
+        panchanga = chart.get_panchanga()
+        
+        if panchanga:
+            # Display all 5 limbs in a structured way
+            for limb_name, limb_data in panchanga.items():
+                if limb_name == 'vara':
+                    st.markdown(f"### 🌅 Vara (Weekday)")
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.metric("Day", limb_data['name'])
+                    with col2:
+                        st.metric("Lord", limb_data['lord'])
+                
+                elif limb_name == 'tithi':
+                    st.markdown(f"### 🌙 Tithi (Lunar Day)")
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("Tithi", f"{limb_data['number']} - {limb_data['name']}")
+                    with col2:
+                        st.metric("Lord", limb_data['lord'])
+                    with col3:
+                        st.metric("Progress", f"{limb_data['percentage_complete']:.1f}%")
+                
+                elif limb_name == 'nakshatra':
+                    st.markdown(f"### ⭐ Nakshatra (Lunar Mansion)")
+                    col1, col2, col3, col4 = st.columns(4)
+                    with col1:
+                        st.metric("Nakshatra", f"{limb_data['number']} - {limb_data['name']}")
+                    with col2:
+                        st.metric("Lord", limb_data['lord'])
+                    with col3:
+                        st.metric("Pada", limb_data['pada'])
+                    with col4:
+                        st.metric("Progress", f"{limb_data['percentage_complete']:.1f}%")
+                
+                elif limb_name == 'yoga':
+                    st.markdown(f"### 🔗 Yoga (Sun-Moon Combination)")
+                    col1, col2, col3 = st.columns(3)
+                    with col1:
+                        st.metric("Yoga", f"{limb_data['number']} - {limb_data['name']}")
+                    with col2:
+                        nature = "Benefic" if limb_data['benefic'] else "Malefic"
+                        if limb_data['benefic']:
+                            st.success(f"🟢 {nature}")
+                        else:
+                            st.error(f"🔴 {nature}")
+                    with col3:
+                        st.metric("Progress", f"{limb_data['percentage_complete']:.1f}%")
+                
+                elif limb_name == 'karana':
+                    st.markdown(f"### 🌗 Karana (Half Tithi)")
+                    col1, col2, col3, col4 = st.columns(4)
+                    with col1:
+                        st.metric("Karana", f"{limb_data['number']} - {limb_data['name']}")
+                    with col2:
+                        st.metric("Type", limb_data['type'])
+                    with col3:
+                        nature = "Benefic" if limb_data['benefic'] else "Malefic"
+                        if limb_data['benefic']:
+                            st.success(f"🟢 {nature}")
+                        else:
+                            st.error(f"🔴 {nature}")
+                    with col4:
+                        st.metric("Progress", f"{limb_data['percentage_complete']:.1f}%")
+            
+            # Summary table
+            st.markdown("### 📋 Panchanga Summary")
+            summary_data = {
+                'Element': ['Vara', 'Tithi', 'Nakshatra', 'Yoga', 'Karana'],
+                'Value': [
+                    panchanga['vara']['name'],
+                    panchanga['tithi']['name'],
+                    f"{panchanga['nakshatra']['name']} Pada {panchanga['nakshatra']['pada']}",
+                    panchanga['yoga']['name'],
+                    panchanga['karana']['name']
+                ],
+                'Lord/Nature': [
+                    panchanga['vara']['lord'],
+                    panchanga['tithi']['lord'],
+                    panchanga['nakshatra']['lord'],
+                    '🟢 Benefic' if panchanga['yoga']['benefic'] else '🔴 Malefic',
+                    '🟢 Benefic' if panchanga['karana']['benefic'] else '🔴 Malefic'
+                ]
+            }
+            df_summary = pd.DataFrame(summary_data)
+            st.dataframe(df_summary, use_container_width=True, hide_index=True)
+        else:
+            st.info("Unable to calculate Panchanga")
+    
+    with tab7:
         st.markdown("## Conjunctions & Mutual Aspects")
         
         # Get aspects data
@@ -1233,7 +1494,7 @@ if st.session_state.chart:
         else:
             st.info("No significant aspects found in the chart.")
     
-    with tab5:
+    with tab8:
         st.markdown("## Yogas (Planetary Combinations)")
         
         # Get yogas
@@ -1285,7 +1546,7 @@ if st.session_state.chart:
         else:
             st.info("No significant yogas found in the chart.")
     
-    with tab6:
+    with tab9:
         st.markdown("## Export Chart Data")
         
         # Get full chart data

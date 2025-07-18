@@ -23,6 +23,8 @@ try:
     from .aspects import Aspects
     from .bhava_analysis import BhavaAnalysis
     from .swiss_ephemeris import SwissEphemeris
+    from .chara_karaka import CharaKaraka
+    from .panchanga import Panchanga
 except ImportError:
     # Fall back to absolute imports (when used directly)
     from conversions import Conversions
@@ -33,6 +35,8 @@ except ImportError:
     from aspects import Aspects
     from bhava_analysis import BhavaAnalysis
     from swiss_ephemeris import SwissEphemeris
+    from chara_karaka import CharaKaraka
+    from panchanga import Panchanga
 
 
 class Chart:
@@ -69,6 +73,9 @@ class Chart:
         
         # Calculate chart
         self.chart_data = self._calculate_chart()
+        
+        # Calculate retrograde motion data
+        self.retrograde_data = self._calculate_retrograde_data()
         
     def _calculate_chart(self) -> Dict:
         """Calculate complete chart data"""
@@ -383,6 +390,69 @@ class Chart:
             })
         
         return yogas
+    
+    def _calculate_retrograde_data(self) -> Dict:
+        """
+        Calculate retrograde motion data for all planets
+        
+        Returns:
+            Dictionary with retrograde data for each planet
+        """
+        try:
+            return self.swiss_ephemeris.calculate_retrograde_data(self.julian_day)
+        except Exception as e:
+            print(f"Error calculating retrograde data: {e}")
+            return {}
+    
+    def get_chara_karakas(self, retrograde_data: Optional[Dict] = None) -> Dict:
+        """
+        Calculate Chara Karakas using both standard and advanced methods
+        
+        Args:
+            retrograde_data: Optional retrograde motion data for advanced calculation
+            
+        Returns:
+            Dictionary with both calculation methods and retrograde data
+        """
+        # Initialize Chara Karaka calculator
+        chara_karaka = CharaKaraka(self.chart_data['grahas'])
+        
+        # Use stored retrograde data if not provided
+        if retrograde_data is None:
+            retrograde_data = self.retrograde_data
+        
+        # Get both calculations
+        result = chara_karaka.get_both_calculations(retrograde_data)
+        
+        # Add retrograde data to result for UI display
+        result['retrograde_data'] = retrograde_data
+        
+        return result
+    
+    def get_panchanga(self) -> Dict:
+        """
+        Calculate Panchanga (five limbs of time)
+        
+        Returns:
+            Dictionary with all panchanga elements
+        """
+        # Get Sun and Moon longitudes
+        sun_data = self.chart_data['grahas'].get('Sun', {})
+        moon_data = self.chart_data['grahas'].get('Moon', {})
+        
+        if not sun_data or not moon_data:
+            return {}
+            
+        # Initialize Panchanga calculator
+        panchanga = Panchanga(
+            sun_longitude=sun_data['longitude'],
+            moon_longitude=moon_data['longitude'],
+            birth_datetime=self.birth_datetime,
+            sunrise_time=None  # TODO: Calculate sunrise time
+        )
+        
+        # Get complete panchanga
+        return panchanga.get_complete_panchanga()
     
     def to_dict(self) -> Dict:
         """Convert entire chart to dictionary"""

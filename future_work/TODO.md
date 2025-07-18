@@ -12,6 +12,19 @@
   - [x] Create responsive scaling logic
   - [x] Add export to PNG/SVG functionality
 
+### JHD File Support (COMPLETED - NEW)
+- [x] Create `CoreLibrary/jhd_converter.py` module
+  - [x] Implement JHDConverter class with bidirectional conversion
+  - [x] Add CSV to JHD conversion with proper formatting
+  - [x] Add JHD to CSV conversion with data extraction
+  - [x] Support batch processing and ZIP file creation
+  - [x] Add timezone handling and coordinate validation
+- [x] Complete `CoreLibrary/file_handler.py` module
+  - [x] Add comprehensive file format detection
+  - [x] Implement file validation for CSV, JHD, JSON, ZIP
+  - [x] Add read/write operations for multiple formats
+  - [x] Include temporary file management
+
 ### Project Structure
 - [x] Create `future_work` folder
 - [x] Create `REQUIREMENTS.md` file
@@ -35,6 +48,14 @@
   - [x] Validate coordinate ranges
 - [x] Add error handling and reporting
 - [x] Create progress bar for batch processing
+
+### JHD Upload Feature (COMPLETED - NEW)
+- [x] Add JHD file upload tab to Research interface
+- [x] Support individual .jhd files and ZIP archives
+- [x] Implement JHD file validation and preview
+- [x] Add batch processing for multiple JHD files
+- [x] Integrate with existing chart processing pipeline
+- [x] Add error handling and progress tracking
 
 ### Batch Display
 - [x] Implement grid layout for multiple charts
@@ -92,6 +113,14 @@
 - [x] Implement JSON export
   - [x] Full chart data structure
   - [x] Include calculated values
+- [x] Implement CSV export (COMPLETED - NEW)
+  - [x] Convert current dataset to standardized CSV format
+  - [x] Include source format tracking
+  - [x] Preserve timezone and coordinate information
+- [x] Implement JHD export (COMPLETED - NEW)
+  - [x] Convert current dataset to JHD format
+  - [x] Create ZIP archives for batch export
+  - [x] Maintain data accuracy across format conversion
 
 ### Analysis Tools
 - [ ] Create statistical summary section
@@ -104,7 +133,31 @@
   - [ ] By yoga presence
 - [ ] Implement search functionality
 
-## Phase 5: Enhancements (Low Priority)
+### Research Tab Bug Fixes (Pending)
+- [ ] Fix CSV export missing latitude/longitude coordinates
+  - [ ] CSV export in Analysis & Export tab doesn't include coordinate data
+  - [ ] Ensure proper coordinate extraction from chart data
+  - [ ] Add latitude/longitude columns to exported CSV files
+- [ ] Fix dignity calculation in detailed chart view
+  - [ ] Research tab "View Details" shows "Neutral" for all planets
+  - [ ] Integrate proper dignity calculation from main app
+  - [ ] Display exaltation, own sign, debilitation, and enemy/friend classifications
+  - [ ] Ensure dignity information matches main app calculations
+
+## Phase 5: Command Line Tools (Low Priority)
+
+### JHD CLI Converter
+- [x] Create `utils/jhd_cli_converter.py` script
+  - [x] Add command-line argument parsing
+  - [x] Support directory batch processing
+  - [x] Implement logging and error reporting
+  - [x] Add CSV-to-JHD conversion command
+  - [x] Add JHD-to-CSV conversion command
+  - [x] Add JHD ZIP creation command
+  - [x] Add JHD validation command
+  - [x] Create usage documentation and examples
+
+## Phase 6: Enhancements (Low Priority)
 
 ### Performance Optimization
 - [ ] Implement caching for calculated charts
