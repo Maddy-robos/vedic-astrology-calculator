@@ -132,11 +132,14 @@ class CharaKaraka:
                     max_forward = retro_info.get('max_forward', degrees_in_rasi)
                     entry_point = retro_info.get('entry_point', 0)
                     
-                    # Calculate total travel
-                    if max_forward > degrees_in_rasi:  # Planet has retrograded
-                        total_travel = (max_forward - entry_point) + (max_forward - degrees_in_rasi)
-                    else:  # No retrograde or moving forward
-                        total_travel = degrees_in_rasi - entry_point
+                    # Use total_travel from retrograde data if available
+                    total_travel = retro_info.get('total_travel', None)
+                    if total_travel is None:
+                        # Fallback to old calculation if total_travel not available
+                        if max_forward > degrees_in_rasi:  # Planet has retrograded
+                            total_travel = (max_forward - entry_point) + (max_forward - degrees_in_rasi)
+                        else:  # No retrograde or moving forward
+                            total_travel = degrees_in_rasi - entry_point
                         
                     degrees_dict[graha_name] = total_travel
                 else:

@@ -1315,11 +1315,40 @@ if st.session_state.chart:
                                     delta_from_max = motion_data['current_position'] - motion_data['max_forward']
                                     st.metric("Current", f"{motion_data['current_position']:.2f}°", delta=f"{delta_from_max:.2f}°")
                                 
+                                # Display motion segments if available
+                                if 'motion_segments' in motion_data and motion_data['motion_segments']:
+                                    st.markdown("**Motion Timeline**")
+                                    
+                                    # Display each segment
+                                    for i, segment in enumerate(motion_data['motion_segments']):
+                                        seg_type = segment['type']
+                                        seg_icon = "→" if seg_type == 'forward' else "←"
+                                        seg_color = "🟢" if seg_type == 'forward' else "🔴"
+                                        
+                                        st.write(f"{seg_color} {seg_icon} {segment['from_degrees']:.1f}° to {segment['to_degrees']:.1f}° ({segment['distance']:.1f}°)")
+                                        
+                                        # Show dates if available
+                                        if segment.get('from_date') and segment.get('to_date'):
+                                            date_range = f"{segment['from_date'].strftime('%Y-%m-%d')} to {segment['to_date'].strftime('%Y-%m-%d')}"
+                                            st.caption(f"   {date_range}")
+                                
                                 # Summary statistics
                                 st.markdown("**Motion Summary**")
                                 total_travel = motion_data.get('total_travel', 0)
-                                forward_travel = motion_data['max_forward'] - motion_data['entry_point']
-                                backward_travel = motion_data['max_forward'] - motion_data['current_position'] if has_retrograded else 0
+                                
+                                # Calculate forward and backward travel from segments
+                                forward_travel = 0
+                                backward_travel = 0
+                                if 'motion_segments' in motion_data:
+                                    for segment in motion_data['motion_segments']:
+                                        if segment['type'] == 'forward':
+                                            forward_travel += segment['distance']
+                                        else:
+                                            backward_travel += segment['distance']
+                                else:
+                                    # Fallback to old calculation
+                                    forward_travel = motion_data['max_forward'] - motion_data['entry_point']
+                                    backward_travel = motion_data['max_forward'] - motion_data['current_position'] if has_retrograded else 0
                                 
                                 col1, col2, col3 = st.columns(3)
                                 with col1:
