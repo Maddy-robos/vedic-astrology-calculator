@@ -1282,14 +1282,20 @@ if st.session_state.chart:
                                 progress_col1, progress_col2 = st.columns([1, 1])
                                 
                                 with progress_col1:
-                                    # Forward motion progress
-                                    forward_progress = (motion_data['max_forward'] - motion_data['entry_point']) / 30.0
-                                    st.progress(forward_progress, text=f"Forward: {motion_data['entry_point']:.1f}° → {motion_data['max_forward']:.1f}°")
+                                    # Forward motion progress - handle negative values
+                                    forward_diff = motion_data['max_forward'] - motion_data['entry_point']
+                                    if forward_diff >= 0:
+                                        forward_progress = min(1.0, forward_diff / 30.0)
+                                        st.progress(forward_progress, text=f"Forward: {motion_data['entry_point']:.1f}° → {motion_data['max_forward']:.1f}°")
+                                    else:
+                                        # Planet entered while retrograde
+                                        st.info(f"Entered retrograde at {motion_data['entry_point']:.1f}°")
                                 
                                 with progress_col2:
                                     if has_retrograded:
-                                        # Retrograde motion progress
-                                        retro_progress = (motion_data['max_forward'] - motion_data['current_position']) / 30.0
+                                        # Retrograde motion progress - ensure positive value
+                                        retro_diff = motion_data['max_forward'] - motion_data['current_position']
+                                        retro_progress = max(0.0, min(1.0, retro_diff / 30.0))
                                         st.progress(retro_progress, text=f"Retrograde: {motion_data['max_forward']:.1f}° → {motion_data['current_position']:.1f}°")
                                     else:
                                         st.info("No retrograde motion")
